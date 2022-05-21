@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Entities/Player/player_collision.tres" type="Shape2D" id=1]
+[ext_resource path="res://Entities/Player/player_sprites.tres" type="SpriteFrames" id=2]
+[ext_resource path="res://Entities/Entity/Entity.tscn" type="PackedScene" id=3]
+
+[node name="Player" instance=ExtResource( 3 )]
+
+[node name="EntityBody" parent="." index="0"]
+collision_layer = 1
+collision_mask = 10
+
+[node name="EntityPhysicsShape" parent="EntityBody" index="0"]
+shape = ExtResource( 1 )
+
+[node name="Entity Sprite" parent="." index="1"]
+frames = ExtResource( 2 )
