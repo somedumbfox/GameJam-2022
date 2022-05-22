@@ -7,9 +7,9 @@
 [node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer"]
 margin_left = 10.0
 margin_top = 10.0
-margin_right = 255.0
+margin_right = 582.0
 margin_bottom = 40.0
-text = "Title TBA"
+text = "Title TBA - If you're on this page, it's too early"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 anchor_mode = 0
