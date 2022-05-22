@@ -18,4 +18,4 @@ jobs:
           CHANNEL: html5
           ITCH_GAME: Dev.tv Game Jam 2022 - Title TBA
           ITCH_USER: somedumbfox
-          PACKAGE: plague-windows.zip
+          PACKAGE: HTML5.zip
