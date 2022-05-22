@@ -11,17 +11,24 @@ config_version=4
 [application]
 
 config/name="Title TBD"
+run/main_scene="res://Levels/Menu/MainMenu.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+DefaultCamera="*res://Entities/Camera/DefaultCamera.tscn"
 
 [display]
 
 window/size/width=600
 window/size/height=1024
-window/size/resizable=false
+window/handheld/orientation="portrait"
+window/stretch/mode="2d"
+window/stretch/aspect="keep"
 
 [input]
 
-special={
+mouse_click={
 "deadzone": 0.5,
 "events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":1,"pressed":false,"doubleclick":false,"script":null)
  ]

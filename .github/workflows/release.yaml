@@ -11,11 +11,11 @@ jobs:
           file: HTML5.zip
         env:
           GITHUB_TOKEN: "${{secrets.GITHUB_TOKEN}}"
-      - name: release html5
+      - name: release HTML5
         uses: josephbmanley/butler-publish-itchio-action@master
         env:
           BUTLER_CREDENTIALS: ${{secrets.BUTLER_CREDENTIALS}}
-          CHANNEL: HTML5
-          ITCH_GAME: Dev.tv Game Jam 2022 - Title TBA
+          CHANNEL: HTML5 / Playable in browser
+          ITCH_GAME: devtv-game-jam-2022-title-tba
           ITCH_USER: somedumbfox
           PACKAGE: HTML5.zip
