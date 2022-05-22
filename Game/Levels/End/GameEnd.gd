@@ -20,4 +20,5 @@ func _process(delta):
 
 func _unhandled_input(event):
 	if(event is InputEventScreenTouch):
-		load_next()
+		if(event.is_pressed()):
+			load_next()
