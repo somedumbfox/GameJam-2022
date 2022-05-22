@@ -15,7 +15,7 @@ jobs:
         uses: josephbmanley/butler-publish-itchio-action@master
         env:
           BUTLER_CREDENTIALS: ${{secrets.BUTLER_CREDENTIALS}}
-          CHANNEL: HTML5 / Playable in browser
+          CHANNEL: HTML5
           ITCH_GAME: devtv-game-jam-2022-title-tba
           ITCH_USER: somedumbfox
           PACKAGE: HTML5.zip
