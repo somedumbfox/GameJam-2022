@@ -1,0 +1,19 @@
+[gd_scene format=2]
+
+[node name="MainMenu" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer"]
+margin_left = 10.0
+margin_top = 10.0
+margin_right = 255.0
+margin_bottom = 40.0
+text = "Title TBA"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+
+[node name="Camera2D2" type="Camera2D" parent="."]
+anchor_mode = 0
+current = true

@@ -2,20 +2,20 @@ on:
   release:
     types: [created, edited]
 jobs:
-  release_windows:
+  release_html5:
     runs-on: ubuntu-latest
     steps:
-      - name: download widows
-        uses: TODO
+      - name: download html5
+        uses: dsaltares/fetch-gh-release-asset@master
         with:
-          file: plague-windows.zip
+          file: title-tbd.zip
         env:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
-      - name: release windows
+      - name: release html5
         uses: josephbmanley/butler-publish-itchio-action@master
         env:
           BUTLER_CREDENTIALS: ${{ secrets.BUTLER_CREDENTIALS }}
-          CHANNEL: windows
-          ITCH_GAME: TODO
+          CHANNEL: html5
+          ITCH_GAME: Dev.tv Game Jam 2022 - Title TBA
           ITCH_USER: somedumbfox
           PACKAGE: plague-windows.zip
