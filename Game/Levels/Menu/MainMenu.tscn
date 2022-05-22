@@ -9,7 +9,7 @@ margin_left = 10.0
 margin_top = 10.0
 margin_right = 582.0
 margin_bottom = 40.0
-text = "Title TBA - If you're on this page, it's too early"
+text = "Title TBA - If you're on this page, it's too early. Come back by May 30th for something special. Maybe. Don't know if we'll be successful yet!"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 anchor_mode = 0
