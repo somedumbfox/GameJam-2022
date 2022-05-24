@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Entities/Player/player_collision.tres" type="Shape2D" id=1]
 [ext_resource path="res://Entities/Player/dualShot.gd" type="Script" id=2]
 [ext_resource path="res://Entities/Entity/Entity.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Entities/Player/Player.gd" type="Script" id=4]
+[ext_resource path="res://Entities/Player/triShot.gd" type="Script" id=5]
+[ext_resource path="res://Entities/Player/quintSpread.gd" type="Script" id=6]
 
 [node name="Player" instance=ExtResource( 3 )]
 position = Vector2( 305, 831 )
@@ -17,21 +19,45 @@ collision_mask = 10
 z_index = 1
 shape = ExtResource( 1 )
 
+[node name="Entity Sprite" parent="EntityBody" index="1"]
+scale = Vector2( 0.75, 0.75 )
+
 [node name="Guns" type="Node2D" parent="." index="2"]
 
-[node name="dualShot" type="Node2D" parent="Guns" index="0"]
+[node name="gunTimer" type="Timer" parent="Guns" index="0"]
+wait_time = 0.2
+autostart = true
+
+[node name="dualShot" type="Node2D" parent="Guns" index="1"]
 script = ExtResource( 2 )
 
 [node name="spawners" type="Node2D" parent="Guns/dualShot" index="0"]
 
 [node name="gunRight" type="Position2D" parent="Guns/dualShot/spawners" index="0"]
-position = Vector2( 15, -15 )
+position = Vector2( 26, -33 )
 
 [node name="gunLeft" type="Position2D" parent="Guns/dualShot/spawners" index="1"]
-position = Vector2( -15, -15 )
+position = Vector2( -26, -33 )
 
-[node name="dualShotTimer" type="Timer" parent="Guns/dualShot" index="1"]
-wait_time = 0.1
-autostart = true
+[node name="triShot" type="Node2D" parent="Guns" index="2"]
+script = ExtResource( 5 )
 
-[connection signal="timeout" from="Guns/dualShot/dualShotTimer" to="Guns/dualShot" method="_on_dualShotTimer_timeout"]
+[node name="spawners" type="Node2D" parent="Guns/triShot" index="0"]
+
+[node name="gunTop" type="Position2D" parent="Guns/triShot/spawners" index="0"]
+position = Vector2( 0, -66 )
+
+[node name="quintSpread" type="Node2D" parent="Guns" index="3"]
+script = ExtResource( 6 )
+
+[node name="spawners" type="Node2D" parent="Guns/quintSpread" index="0"]
+
+[node name="spreadLeft" type="Position2D" parent="Guns/quintSpread/spawners" index="0"]
+position = Vector2( -26, -33 )
+
+[node name="spreadRight" type="Position2D" parent="Guns/quintSpread/spawners" index="1"]
+position = Vector2( 26, -33 )
+
+[connection signal="timeout" from="Guns/gunTimer" to="Guns/dualShot" method="_on_gunTimer_timeout"]
+[connection signal="timeout" from="Guns/gunTimer" to="Guns/triShot" method="_on_gunTimer_timeout"]
+[connection signal="timeout" from="Guns/gunTimer" to="Guns/quintSpread" method="_on_gunTimer_timeout"]

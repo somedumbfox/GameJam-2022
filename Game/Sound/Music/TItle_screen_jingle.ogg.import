@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/TItle_screen_jingle.ogg-58a7c02d42e9e1a2d45ba171dc4ab178.oggstr"
+
+[deps]
+
+source_file="res://Sound/Music/TItle_screen_jingle.ogg"
+dest_files=[ "res://.import/TItle_screen_jingle.ogg-58a7c02d42e9e1a2d45ba171dc4ab178.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

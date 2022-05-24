@@ -1,8 +1,8 @@
 extends KinematicBody2D
 
-export var SPEED = 500
+const SPEED = 500
 
-const UP = Vector2(0,-1)
+var DIRECTION = Vector2(0,-1)
 
 
 # Called when the node enters the scene tree for the first time.
@@ -18,7 +18,7 @@ func _physics_process(delta):
 	move()
 	
 func move():
-	move_and_slide(UP*SPEED)
+	move_and_slide(DIRECTION*SPEED)
 
 func _on_VisibilityNotifier2D_screen_exited():
 	#print_debug("I'm gone")

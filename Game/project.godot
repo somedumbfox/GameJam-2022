@@ -20,7 +20,7 @@ DefaultCamera="*res://Entities/Camera/DefaultCamera.tscn"
 
 [display]
 
-window/size/width=600
+window/size/width=576
 window/size/height=1024
 window/handheld/orientation="portrait"
 window/stretch/mode="viewport"
