@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Player_Ship_Temp.png-f78b483c84a1a725cd9d3489b3d611d6.stex"
+path="res://.import/bullet_12_3.png-27db78746a95dbdbeb832f9eeb737fec.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Entities/Player/sprites/Player_Ship_Temp.png"
-dest_files=[ "res://.import/Player_Ship_Temp.png-f78b483c84a1a725cd9d3489b3d611d6.stex" ]
+source_file="res://Entities/NPC/Enemies/Sprites/Bullets/bullet_12_3.png"
+dest_files=[ "res://.import/bullet_12_3.png-27db78746a95dbdbeb832f9eeb737fec.stex" ]
 
 [params]
 
@@ -21,7 +21,7 @@ compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
 flags/filter=true
-flags/mipmaps=false
+flags/mipmaps=true
 flags/anisotropic=false
 flags/srgb=2
 process/fix_alpha_border=true

@@ -1,16 +1,35 @@
-[gd_resource type="SpriteFrames" load_steps=2 format=2]
+[gd_resource type="SpriteFrames" load_steps=6 format=2]
 
-[ext_resource path="res://Entities/Entity/DefaultSprite/default_square.png" type="Texture" id=1]
+[ext_resource path="res://Entities/Player/sprites/Bullets/Bullet_3_(player).png" type="Texture" id=1]
+[ext_resource path="res://Entities/Player/sprites/Bullets/Bullet_1_(player).png" type="Texture" id=2]
+[ext_resource path="res://Entities/Player/sprites/Bullets/bullet_7_(player).png" type="Texture" id=3]
+[ext_resource path="res://Entities/Player/sprites/Bullets/Bullet_4_(player).png" type="Texture" id=4]
+[ext_resource path="res://Entities/Entity/DefaultSprite/default_square.png" type="Texture" id=5]
 
 [resource]
 animations = [ {
-"frames": [  ],
+"frames": [ ExtResource( 5 ) ],
 "loop": true,
 "name": "default",
 "speed": 5.0
 }, {
+"frames": [ ExtResource( 4 ) ],
+"loop": true,
+"name": "fire2",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "fire0",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 1 ) ],
 "loop": true,
-"name": "fire",
+"name": "fire1",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "fire3",
 "speed": 5.0
 } ]

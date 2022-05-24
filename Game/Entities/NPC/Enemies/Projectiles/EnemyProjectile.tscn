@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Entities/Player/Gun/Projectile.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Entities/NPC/Enemies/Projectiles/EnemyProjectileSprites.tres" type="SpriteFrames" id=2]
+[ext_resource path="res://Entities/NPC/Enemies/Projectiles/EnemyProjectile.gd" type="Script" id=3]
+
+[node name="EnemyProjectile" instance=ExtResource( 1 )]
+script = ExtResource( 3 )
+
+[node name="AnimatedSprite" parent="." index="1"]
+position = Vector2( -45, 0 )
+rotation = -1.5708
+frames = ExtResource( 2 )
+frame = 1
+playing = true
