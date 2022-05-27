@@ -26,6 +26,18 @@ window/handheld/orientation="portrait"
 window/stretch/mode="viewport"
 window/stretch/aspect="keep"
 
+[importer_defaults]
+
+mp3={
+"loop": false
+}
+texture={
+"flags/filter": false
+}
+ogg_vorbis={
+"loop": false
+}
+
 [input]
 
 mouse_click={
@@ -40,6 +52,7 @@ mouse_click={
 2d_physics/layer_2="NPC"
 2d_physics/layer_3="Player_Projectile"
 2d_physics/layer_4="NPC_Projectile"
+2d_physics/layer_5="KILLZONE"
 
 [physics]
 

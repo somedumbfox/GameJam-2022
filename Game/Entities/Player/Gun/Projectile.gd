@@ -26,3 +26,6 @@ func _on_VisibilityNotifier2D_screen_exited():
 	#print_debug("I'm gone")
 	$AnimationPlayer.play("RESET")
 	queue_free()
+	
+func hit_enemy():
+	queue_free()

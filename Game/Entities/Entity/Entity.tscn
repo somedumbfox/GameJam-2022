@@ -8,9 +8,9 @@
 position = Vector2( 97, 42 )
 script = ExtResource( 3 )
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="EntityCollisionDetector" type="Area2D" parent="."]
 
-[node name="EntityPhysicsShape" type="CollisionShape2D" parent="Area2D"]
+[node name="EntityPhysicsShape" type="CollisionShape2D" parent="EntityCollisionDetector"]
 shape = ExtResource( 1 )
 
 [node name="EntitySprite" type="AnimatedSprite" parent="."]

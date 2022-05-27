@@ -14,6 +14,8 @@ var CAMERA
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	health = 9
+	$health.text = String(health)
 	CAMERA = $"/root/DefaultCamera"
 	SPRITE = $EntitySprite
 	pass # Replace with function body.
@@ -48,3 +50,10 @@ func _unhandled_input(event):
 	if(event is InputEventScreenDrag):
 		screen_controls_enabled = true
 		mouse_position = event.position
+
+
+func _on_EntityCollisionDetector_area_entered(area):
+	$AnimationPlayer.play(("RESET"))
+	$AnimationPlayer.play("hit") 
+	health -= 1
+	$health.text = String(health)

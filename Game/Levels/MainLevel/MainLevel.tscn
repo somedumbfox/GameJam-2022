@@ -6,6 +6,10 @@
 
 [node name="MainLevel" type="Node2D"]
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_horizontal_guides_": [ 0.0 ],
+"_edit_vertical_guides_": [ 576.0 ]
+}
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -23,49 +27,66 @@ position = Vector2( 300, 841 )
 position = Vector2( 4, 0 )
 
 [node name="EnemyPawn0" parent="Enemies" instance=ExtResource( 3 )]
-position = Vector2( 51, -74 )
+position = Vector2( 28, -64 )
 
 [node name="EnemyPawn1" parent="Enemies" instance=ExtResource( 3 )]
-position = Vector2( 209, -851 )
+position = Vector2( 412, -192 )
 
 [node name="EnemyPawn2" parent="Enemies" instance=ExtResource( 3 )]
-position = Vector2( 451, -727 )
+position = Vector2( 348, -192 )
 
 [node name="EnemyPawn3" parent="Enemies" instance=ExtResource( 3 )]
-position = Vector2( 85, -592 )
+position = Vector2( 220, -64 )
 
 [node name="EnemyPawn4" parent="Enemies" instance=ExtResource( 3 )]
-position = Vector2( 519, -75 )
+position = Vector2( 92, -64 )
 
 [node name="EnemyPawn5" parent="Enemies" instance=ExtResource( 3 )]
-position = Vector2( 300, -1157 )
+position = Vector2( 476, -192 )
 
 [node name="EnemyPawn6" parent="Enemies" instance=ExtResource( 3 )]
-position = Vector2( 508, -406 )
+position = Vector2( 156, -64 )
 
 [node name="EnemyPawn7" parent="Enemies" instance=ExtResource( 3 )]
-position = Vector2( 456, -1344 )
+position = Vector2( 28, -320 )
 
 [node name="EnemyPawn8" parent="Enemies" instance=ExtResource( 3 )]
-position = Vector2( 89, -1282 )
+position = Vector2( 540, -192 )
 
 [node name="EnemyPawn9" parent="Enemies" instance=ExtResource( 3 )]
-position = Vector2( 424, -1851 )
+position = Vector2( 156, -320 )
 
 [node name="EnemyPawn10" parent="Enemies" instance=ExtResource( 3 )]
-position = Vector2( 102, -2521 )
+position = Vector2( 156, -896 )
+
+[node name="EnemyPawn17" parent="Enemies" instance=ExtResource( 3 )]
+position = Vector2( 220, -896 )
+
+[node name="EnemyPawn18" parent="Enemies" instance=ExtResource( 3 )]
+position = Vector2( 284, -896 )
+
+[node name="EnemyPawn19" parent="Enemies" instance=ExtResource( 3 )]
+position = Vector2( 348, -896 )
+
+[node name="EnemyPawn16" parent="Enemies" instance=ExtResource( 3 )]
+position = Vector2( 92, -896 )
 
 [node name="EnemyPawn11" parent="Enemies" instance=ExtResource( 3 )]
-position = Vector2( 519, -2571 )
+position = Vector2( 29, -896 )
 
 [node name="EnemyPawn12" parent="Enemies" instance=ExtResource( 3 )]
-position = Vector2( 141, -1894 )
+position = Vector2( 221, -318 )
 
 [node name="EnemyPawn13" parent="Enemies" instance=ExtResource( 3 )]
-position = Vector2( 326, -2777 )
+position = Vector2( 412, -896 )
+
+[node name="EnemyPawn20" parent="Enemies" instance=ExtResource( 3 )]
+position = Vector2( 476, -896 )
 
 [node name="EnemyPawn14" parent="Enemies" instance=ExtResource( 3 )]
-position = Vector2( 84, -2813 )
+position = Vector2( 540, -896 )
 
 [node name="EnemyPawn15" parent="Enemies" instance=ExtResource( 3 )]
-position = Vector2( 208, -1554 )
+position = Vector2( 92, -320 )
+
+[editable path="Player"]
