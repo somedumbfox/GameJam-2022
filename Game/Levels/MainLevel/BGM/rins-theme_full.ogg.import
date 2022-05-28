@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/rins-theme_full.ogg-4f567146f4b380ffbedb8d1bae6477b9.oggstr"
+
+[deps]
+
+source_file="res://Levels/MainLevel/BGM/rins-theme_full.ogg"
+dest_files=[ "res://.import/rins-theme_full.ogg-4f567146f4b380ffbedb8d1bae6477b9.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=7.196

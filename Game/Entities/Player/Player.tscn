@@ -47,7 +47,7 @@ tracks/2/keys = {
 "values": [ 0.0 ]
 }
 
-[node name="Player" instance=ExtResource( 3 )]
+[node name="Player" groups=["combo"] instance=ExtResource( 3 )]
 position = Vector2( 288, 756 )
 script = ExtResource( 4 )
 
@@ -101,11 +101,11 @@ anims/RESET = SubResource( 1 )
 anims/hit = ExtResource( 7 )
 
 [node name="health" type="RichTextLabel" parent="." index="4"]
-margin_left = 14.0
+margin_left = 50.0
 margin_top = -72.0
-margin_right = 54.0
-margin_bottom = -32.0
-text = "Num"
+margin_right = 172.0
+margin_bottom = 52.0
+scroll_active = false
 
 [connection signal="area_entered" from="EntityCollisionDetector" to="." method="_on_EntityCollisionDetector_area_entered"]
 [connection signal="timeout" from="Guns/gunTimer" to="Guns/dualShot" method="_on_gunTimer_timeout"]

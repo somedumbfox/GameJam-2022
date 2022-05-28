@@ -26,6 +26,10 @@ window/handheld/orientation="portrait"
 window/stretch/mode="viewport"
 window/stretch/aspect="keep"
 
+[editor]
+
+main_run_args="--verbose"
+
 [importer_defaults]
 
 mp3={

@@ -13,7 +13,7 @@ func fire():
 	var guns = $spawners.get_children()
 	for gun in guns:
 		var bullet = projectile.instance()
-		bullet.power = player.bulletPower
+		bullet.power = player.dualShotPower
 		bullet.global_position = gun.global_position
 		bullet.set_as_toplevel(true)
 		add_child(bullet)

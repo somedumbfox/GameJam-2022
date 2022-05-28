@@ -6,6 +6,11 @@ export var isEnabled = false
 var projectileLeft = preload("res://Entities/Player/Gun/angleLeftProjectile.tscn")
 var projectileRight = preload("res://Entities/Player/Gun/angleRightProjectile.tscn")
 
+var player
+
+func _ready():
+	player = get_parent().get_parent()
+
 func fire():
 	var count = 0
 	var guns = $spawners.get_children()
@@ -15,6 +20,7 @@ func fire():
 			bullet = projectileLeft.instance()
 		else:
 			bullet = projectileRight.instance()
+		bullet.power = player.triShotPower
 		bullet.global_position = gun.global_position
 		bullet.set_as_toplevel(true)
 		add_child(bullet)

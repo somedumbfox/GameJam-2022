@@ -1,7 +1,7 @@
 extends "res://Entities/Entity/Entity.gd"
 
 
-var SPEED = 200
+var SPEED = 150
 var offScreen = true
 
 
@@ -12,7 +12,8 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	position += Vector2(0,1)*SPEED*delta
+	if(!offScreen):
+		position += Vector2(0,1)*SPEED*delta
 	$RichTextLabel.text = String(health)
 
 
@@ -29,6 +30,7 @@ func _on_EntityCollisionDetector_area_entered(area:Area2D):
 				play_hit()
 				health -= projectile.power
 				projectile.queue_free()
+				get_tree().call_group("combo", "increment_combo", projectile.power)
 	else:
 		play_hit()
 		health -= 1
