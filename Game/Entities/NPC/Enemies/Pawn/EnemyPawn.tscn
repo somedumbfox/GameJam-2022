@@ -398,6 +398,7 @@ position = Vector2( 0, 50 )
 wait_time = 0.75
 
 [node name="RichTextLabel" type="RichTextLabel" parent="." index="5"]
+visible = false
 margin_left = 15.0
 margin_top = -52.0
 margin_right = 55.0

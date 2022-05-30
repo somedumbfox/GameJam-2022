@@ -187,6 +187,7 @@ anims/ghostMode = SubResource( 3 )
 anims/hit = ExtResource( 7 )
 
 [node name="health" type="RichTextLabel" parent="." index="4"]
+visible = false
 margin_left = 61.0
 margin_top = -61.0
 margin_right = 183.0

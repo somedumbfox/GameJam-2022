@@ -23,6 +23,11 @@ func _on_VisibilityEnabler2D_screen_entered():
 
 
 func _on_EntityCollisionDetector_area_entered(area:Area2D):
+	if(area.get_collision_layer_bit(4)):
+		SPEED = 0
+		$AnimationPlayer.play("die")
+		return
+	
 	if(area.get_collision_layer_bit(2)):
 		var projectile:Node = area.get_parent()
 		if(!offScreen):
@@ -36,7 +41,7 @@ func _on_EntityCollisionDetector_area_entered(area:Area2D):
 		health -= 1
 
 	$RichTextLabel.text = String(health)
-	if(health <= 0 or area.get_collision_layer_bit(4)):
+	if(health <= 0):
 		SPEED = 0
 		get_tree().call_group("UI", "increment_score", scoreValue)
 		$Gun/gunTimer.stop()
