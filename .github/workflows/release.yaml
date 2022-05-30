@@ -25,7 +25,7 @@ jobs:
       - name: Windowsx64
         uses: dsaltares/fetch-gh-release-asset@master
         with:
-          file: Windowsx64.zip
+          file: WINDOWSx64.zip
         env:
           GITHUB_TOKEN: "${{secrets.GITHUB_TOKEN}}"
       - name: release Windows
@@ -35,4 +35,4 @@ jobs:
           CHANNEL: Windows
           ITCH_GAME: devtv-game-jam-2022-title-tba
           ITCH_USER: somedumbfox
-          PACKAGE: Windowsx64.zip
+          PACKAGE: WINDOWSx64.zip
