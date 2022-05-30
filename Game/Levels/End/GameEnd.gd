@@ -8,7 +8,7 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$CanvasLayer/RichTextLabel.text = "Game Over\n\nFinal Score\n %d" % Globals.score
+	$CanvasLayer/RichTextLabel.text = "Congratulations\n\nFinal Score\n %d" % Globals.score
 
 func load_next():
 	get_tree().change_scene("res://Levels/Menu/MainMenu.tscn")

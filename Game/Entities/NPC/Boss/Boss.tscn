@@ -274,6 +274,11 @@ tracks/4/keys = {
 
 [node name="Boss" instance=ExtResource( 1 )]
 script = ExtResource( 6 )
+health = 500
+
+[node name="EntityCollisionDetector" parent="." index="0"]
+collision_layer = 2
+collision_mask = 5
 
 [node name="EntityPhysicsShape" parent="EntityCollisionDetector" index="0"]
 position = Vector2( 0, 10 )
@@ -295,4 +300,7 @@ position = Vector2( 3, 36 )
 stream = ExtResource( 4 )
 volume_db = 1.5
 
+[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="." index="4"]
+
 [connection signal="area_entered" from="EntityCollisionDetector" to="." method="_on_EntityCollisionDetector_area_entered"]
+[connection signal="screen_entered" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_entered"]

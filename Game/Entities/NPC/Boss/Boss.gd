@@ -30,6 +30,10 @@ func _on_EntityCollisionDetector_area_entered(area:Area2D):
 		play_hit()
 		health -= 1
 		
+	if(health <= 0):
+		get_tree().call_group("UI", "increment_score", scoreValue)
+		$AnimationPlayer.play("die")
+		
 func play_hit():
 	$AnimationPlayer.play("RESET")
 	$AnimationPlayer.play("hit")
@@ -37,3 +41,7 @@ func play_hit():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
+
+
+func _on_VisibilityNotifier2D_screen_entered():
+	offScreen = false # Replace with function body.

@@ -11,7 +11,7 @@ var multiplier = 1
 export var dualShotPower = 1
 export var triShotPower = 1
 export var quintShotPower = 1
-const SPEED = 10
+const SPEED = 20
 var SPRITE
 var CAMERA
 const max_lives = 9
