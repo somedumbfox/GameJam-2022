@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Player_Ship_Temp_Turn_R.png-87816db7e85165e57e0c6db7f5e9a029.stex"
+path="res://.import/ghost_1.png-6d2a6100faa6f03e15b4d8fa2bb8e5c3.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Entities/Player/sprites/Ship/Player_Ship_Temp_Turn_R.png"
-dest_files=[ "res://.import/Player_Ship_Temp_Turn_R.png-87816db7e85165e57e0c6db7f5e9a029.stex" ]
+source_file="res://Entities/Player/Ghosts/Sprites/ghost_1.png"
+dest_files=[ "res://.import/ghost_1.png-6d2a6100faa6f03e15b4d8fa2bb8e5c3.stex" ]
 
 [params]
 
@@ -20,8 +20,8 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
-flags/mipmaps=true
+flags/filter=false
+flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
 process/fix_alpha_border=true

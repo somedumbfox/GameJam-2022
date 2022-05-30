@@ -33,3 +33,8 @@ func _unhandled_input(event):
 	if(event is InputEventScreenTouch):
 		if(event[1].is_pressed()):
 			load_next()
+
+
+func _on_Boss_tree_exited():
+	$AudioStreamPlayer.stop()
+	load_next() # Replace with function body.

@@ -13,7 +13,7 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if(!offScreen):
-		position += Vector2(0,1)*SPEED*delta
+		position += direction*SPEED*delta
 	$RichTextLabel.text = String(health)
 
 

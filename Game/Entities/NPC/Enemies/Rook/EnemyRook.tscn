@@ -319,6 +319,7 @@ scoreValue = 30
 [node name="EntityCollisionDetector" parent="." index="0"]
 collision_layer = 2
 collision_mask = 18
+monitorable = false
 
 [node name="EntityPhysicsShape" parent="EntityCollisionDetector" index="0"]
 position = Vector2( 0, 7.25 )
@@ -334,7 +335,7 @@ anims/die = SubResource( 3 )
 anims/hit = SubResource( 1 )
 
 [node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="." index="3"]
-position = Vector2( 0, 72 )
+position = Vector2( 0, 70 )
 
 [node name="Gun" type="Node2D" parent="." index="4"]
 
@@ -360,6 +361,9 @@ margin_left = 35.0
 margin_top = -74.0
 margin_right = 75.0
 margin_bottom = -34.0
+
+[node name="AudioStreamPlayer2D" parent="." index="6"]
+stream = ExtResource( 7 )
 
 [connection signal="area_entered" from="EntityCollisionDetector" to="." method="_on_EntityCollisionDetector_area_entered"]
 [connection signal="screen_entered" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_entered"]

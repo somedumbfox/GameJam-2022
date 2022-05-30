@@ -23,16 +23,16 @@ func fire():
 		var bullet = projectile.instance()
 		match(count):
 			0:
-				bullet.direction = Vector2(-.5, .5)
-				bullet.rotation_degrees = 135
+				bullet.direction = Vector2(-.5, 0)
+				bullet.rotation_degrees = 180
 				continue
 			1:
 				bullet.direction = Vector2(0, .5)
 				bullet.rotation_degrees = 90
 				continue
 			2:
-				bullet.direction = Vector2(.5, .5)
-				bullet.rotation_degrees = 45
+				bullet.direction = Vector2(.5, 0)
+				bullet.rotation_degrees = 0
 				continue
 		#var rad = player.position.angle_to_point(self.global_position)
 		#direction = Vector2(cos(rad), sin(rad))

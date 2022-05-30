@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=31 format=2]
 
 [ext_resource path="res://Levels/MainLevel/MainLevel.gd" type="Script" id=1]
 [ext_resource path="res://Entities/Player/Player.tscn" type="PackedScene" id=2]
@@ -27,6 +27,9 @@
 [ext_resource path="res://Levels/MainLevel/BGM/rins-theme_full.ogg" type="AudioStream" id=25]
 [ext_resource path="res://Entities/NPC/Enemies/Rook/EnemyRook.tscn" type="PackedScene" id=26]
 [ext_resource path="res://UI/UI.tscn" type="PackedScene" id=27]
+[ext_resource path="res://Entities/NPC/Enemies/Queen/EnemyQueen.tscn" type="PackedScene" id=28]
+[ext_resource path="res://Entities/NPC/Enemies/Bishop/EnemyBishop.tscn" type="PackedScene" id=29]
+[ext_resource path="res://Entities/NPC/Boss/Boss.tscn" type="PackedScene" id=30]
 
 [node name="MainLevel" type="Node2D"]
 script = ExtResource( 1 )
@@ -45,6 +48,9 @@ z_index = 1
 
 [node name="wave0" type="Node2D" parent="Enemies"]
 position = Vector2( -4, -48 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Enemy0" parent="Enemies/wave0" instance=ExtResource( 3 )]
 position = Vector2( 32, -64 )
@@ -110,37 +116,40 @@ position = Vector2( 544, -896 )
 position = Vector2( 96, -432 )
 
 [node name="wave1" type="Node2D" parent="Enemies"]
-position = Vector2( -4, -1056 )
+position = Vector2( -4, -1024 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Enemy0" parent="Enemies/wave1" instance=ExtResource( 3 )]
-position = Vector2( 32, -432 )
+position = Vector2( 32, -64 )
 
 [node name="Enemy1" parent="Enemies/wave1" instance=ExtResource( 3 )]
-position = Vector2( 384, -480 )
+position = Vector2( 416, -160 )
 
 [node name="Enemy2" parent="Enemies/wave1" instance=ExtResource( 3 )]
-position = Vector2( 320, -544 )
+position = Vector2( 352, -176 )
 
 [node name="Enemy3" parent="Enemies/wave1" instance=ExtResource( 3 )]
-position = Vector2( 224, -368 )
+position = Vector2( 224, -48 )
 
 [node name="Enemy4" parent="Enemies/wave1" instance=ExtResource( 3 )]
-position = Vector2( 96, -368 )
+position = Vector2( 96, -48 )
 
 [node name="Enemy5" parent="Enemies/wave1" instance=ExtResource( 3 )]
-position = Vector2( 448, -544 )
+position = Vector2( 480, -176 )
 
 [node name="Enemy6" parent="Enemies/wave1" instance=ExtResource( 3 )]
-position = Vector2( 160, -432 )
+position = Vector2( 160, -64 )
 
 [node name="Enemy7" parent="Enemies/wave1" instance=ExtResource( 3 )]
-position = Vector2( 32, -608 )
+position = Vector2( 32, -288 )
 
 [node name="Enemy8" parent="Enemies/wave1" instance=ExtResource( 3 )]
-position = Vector2( 512, -480 )
+position = Vector2( 544, -160 )
 
 [node name="Enemy9" parent="Enemies/wave1" instance=ExtResource( 3 )]
-position = Vector2( 160, -608 )
+position = Vector2( 160, -288 )
 
 [node name="Enemy10" parent="Enemies/wave1" instance=ExtResource( 3 )]
 position = Vector2( 159, -944 )
@@ -167,7 +176,7 @@ position = Vector2( 32, -864 )
 health = 6
 
 [node name="Enemy12" parent="Enemies/wave1" instance=ExtResource( 3 )]
-position = Vector2( 224, -656 )
+position = Vector2( 224, -304 )
 
 [node name="Enemy13" parent="Enemies/wave1" instance=ExtResource( 3 )]
 position = Vector2( 415, -944 )
@@ -182,16 +191,1718 @@ position = Vector2( 543, -864 )
 health = 6
 
 [node name="Enemy15" parent="Enemies/wave1" instance=ExtResource( 3 )]
-position = Vector2( 96, -656 )
+position = Vector2( 96, -304 )
 
 [node name="Enemy21" parent="Enemies/wave1" instance=ExtResource( 26 )]
-position = Vector2( 352, -96 )
+position = Vector2( 448, -576 )
 
 [node name="Enemy22" parent="Enemies/wave1" instance=ExtResource( 26 )]
-position = Vector2( 288, -80 )
+position = Vector2( 288, -528 )
+direction = Vector2( 0.25, 0 )
 
 [node name="Enemy23" parent="Enemies/wave1" instance=ExtResource( 26 )]
-position = Vector2( 224, -96 )
+position = Vector2( 128, -576 )
+
+[node name="wave2" type="Node2D" parent="Enemies"]
+position = Vector2( -4, -2048 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Enemy10" parent="Enemies/wave2" instance=ExtResource( 3 )]
+position = Vector2( 139, -400 )
+health = 6
+
+[node name="Enemy17" parent="Enemies/wave2" instance=ExtResource( 3 )]
+position = Vector2( 431, -400 )
+health = 6
+
+[node name="Enemy18" parent="Enemies/wave2" instance=ExtResource( 3 )]
+position = Vector2( 96, -496 )
+health = 6
+
+[node name="Enemy19" parent="Enemies/wave2" instance=ExtResource( 3 )]
+position = Vector2( 192, -496 )
+health = 6
+
+[node name="Enemy16" parent="Enemies/wave2" instance=ExtResource( 3 )]
+position = Vector2( 335, -400 )
+health = 6
+
+[node name="Enemy11" parent="Enemies/wave2" instance=ExtResource( 3 )]
+position = Vector2( 240, -400 )
+health = 6
+
+[node name="Enemy13" parent="Enemies/wave2" instance=ExtResource( 3 )]
+position = Vector2( 384, -496 )
+health = 6
+
+[node name="Enemy20" parent="Enemies/wave2" instance=ExtResource( 3 )]
+position = Vector2( 480, -496 )
+health = 6
+
+[node name="Enemy14" parent="Enemies/wave2" instance=ExtResource( 3 )]
+position = Vector2( 288, -496 )
+health = 6
+
+[node name="Enemy21" parent="Enemies/wave2" instance=ExtResource( 26 )]
+position = Vector2( 320, -272 )
+health = 20
+
+[node name="Enemy22" parent="Enemies/wave2" instance=ExtResource( 26 )]
+position = Vector2( 384, -224 )
+health = 20
+
+[node name="Enemy23" parent="Enemies/wave2" instance=ExtResource( 26 )]
+position = Vector2( 448, -176 )
+health = 20
+
+[node name="Enemy24" parent="Enemies/wave2" instance=ExtResource( 26 )]
+position = Vector2( 512, -128 )
+health = 20
+
+[node name="Enemy25" parent="Enemies/wave2" instance=ExtResource( 26 )]
+position = Vector2( 256, -272 )
+health = 20
+
+[node name="Enemy26" parent="Enemies/wave2" instance=ExtResource( 26 )]
+position = Vector2( 192, -224 )
+health = 20
+
+[node name="Enemy27" parent="Enemies/wave2" instance=ExtResource( 26 )]
+position = Vector2( 128, -176 )
+health = 20
+
+[node name="Enemy28" parent="Enemies/wave2" instance=ExtResource( 26 )]
+position = Vector2( 64, -112 )
+health = 20
+
+[node name="Enemy12" parent="Enemies/wave2" instance=ExtResource( 3 )]
+position = Vector2( 139, -880 )
+health = 6
+
+[node name="Enemy29" parent="Enemies/wave2" instance=ExtResource( 3 )]
+position = Vector2( 431, -880 )
+health = 6
+
+[node name="Enemy30" parent="Enemies/wave2" instance=ExtResource( 3 )]
+position = Vector2( 96, -976 )
+health = 6
+
+[node name="Enemy31" parent="Enemies/wave2" instance=ExtResource( 3 )]
+position = Vector2( 192, -976 )
+health = 6
+
+[node name="Enemy32" parent="Enemies/wave2" instance=ExtResource( 3 )]
+position = Vector2( 335, -880 )
+health = 6
+
+[node name="Enemy15" parent="Enemies/wave2" instance=ExtResource( 3 )]
+position = Vector2( 240, -880 )
+health = 6
+
+[node name="Enemy33" parent="Enemies/wave2" instance=ExtResource( 3 )]
+position = Vector2( 384, -976 )
+health = 6
+
+[node name="Enemy34" parent="Enemies/wave2" instance=ExtResource( 3 )]
+position = Vector2( 480, -976 )
+health = 6
+
+[node name="Enemy35" parent="Enemies/wave2" instance=ExtResource( 3 )]
+position = Vector2( 288, -976 )
+health = 6
+
+[node name="Enemy36" parent="Enemies/wave2" instance=ExtResource( 26 )]
+position = Vector2( 320, -736 )
+health = 20
+
+[node name="Enemy38" parent="Enemies/wave2" instance=ExtResource( 26 )]
+position = Vector2( 512, -656 )
+health = 20
+direction = Vector2( -0.25, 0 )
+
+[node name="Enemy40" parent="Enemies/wave2" instance=ExtResource( 26 )]
+position = Vector2( 256, -736 )
+health = 20
+
+[node name="Enemy41" parent="Enemies/wave2" instance=ExtResource( 26 )]
+position = Vector2( 64, -688 )
+health = 20
+direction = Vector2( 0.25, 0 )
+
+[node name="Enemy43" parent="Enemies/wave2" instance=ExtResource( 26 )]
+position = Vector2( 64, -592 )
+health = 20
+direction = Vector2( 0.25, 0 )
+
+[node name="wave3" type="Node2D" parent="Enemies"]
+position = Vector2( -4, -3072 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Enemy10" parent="Enemies/wave3" instance=ExtResource( 3 )]
+position = Vector2( 139, -256 )
+health = 6
+
+[node name="Enemy17" parent="Enemies/wave3" instance=ExtResource( 3 )]
+position = Vector2( 431, -256 )
+health = 6
+
+[node name="Enemy18" parent="Enemies/wave3" instance=ExtResource( 3 )]
+position = Vector2( 96, -352 )
+health = 6
+
+[node name="Enemy19" parent="Enemies/wave3" instance=ExtResource( 3 )]
+position = Vector2( 192, -352 )
+health = 6
+
+[node name="Enemy16" parent="Enemies/wave3" instance=ExtResource( 3 )]
+position = Vector2( 335, -256 )
+health = 6
+
+[node name="Enemy11" parent="Enemies/wave3" instance=ExtResource( 3 )]
+position = Vector2( 240, -256 )
+health = 6
+
+[node name="Enemy13" parent="Enemies/wave3" instance=ExtResource( 3 )]
+position = Vector2( 384, -352 )
+health = 6
+
+[node name="Enemy20" parent="Enemies/wave3" instance=ExtResource( 3 )]
+position = Vector2( 480, -352 )
+health = 6
+
+[node name="Enemy14" parent="Enemies/wave3" instance=ExtResource( 3 )]
+position = Vector2( 288, -352 )
+health = 6
+
+[node name="Enemy12" parent="Enemies/wave3" instance=ExtResource( 3 )]
+position = Vector2( 96, -976 )
+health = 6
+
+[node name="Enemy29" parent="Enemies/wave3" instance=ExtResource( 3 )]
+position = Vector2( 480, -976 )
+health = 6
+
+[node name="Enemy30" parent="Enemies/wave3" instance=ExtResource( 3 )]
+position = Vector2( 32, -976 )
+health = 6
+
+[node name="Enemy31" parent="Enemies/wave3" instance=ExtResource( 3 )]
+position = Vector2( 160, -976 )
+health = 6
+
+[node name="Enemy32" parent="Enemies/wave3" instance=ExtResource( 3 )]
+position = Vector2( 288, -976 )
+health = 6
+
+[node name="Enemy15" parent="Enemies/wave3" instance=ExtResource( 3 )]
+position = Vector2( 352, -976 )
+health = 6
+
+[node name="Enemy33" parent="Enemies/wave3" instance=ExtResource( 3 )]
+position = Vector2( 416, -976 )
+health = 6
+
+[node name="Enemy34" parent="Enemies/wave3" instance=ExtResource( 3 )]
+position = Vector2( 544, -976 )
+health = 6
+
+[node name="Enemy35" parent="Enemies/wave3" instance=ExtResource( 3 )]
+position = Vector2( 224, -976 )
+health = 6
+
+[node name="Enemy36" parent="Enemies/wave3" instance=ExtResource( 26 )]
+position = Vector2( 384, -736 )
+health = 20
+
+[node name="Enemy37" parent="Enemies/wave3" instance=ExtResource( 26 )]
+position = Vector2( 64, -736 )
+health = 20
+
+[node name="Enemy42" parent="Enemies/wave3" instance=ExtResource( 26 )]
+position = Vector2( 512, -736 )
+health = 20
+
+[node name="Enemy38" parent="Enemies/wave3" instance=ExtResource( 26 )]
+position = Vector2( 544, -80 )
+health = 20
+direction = Vector2( -0.25, 0 )
+
+[node name="Enemy39" parent="Enemies/wave3" instance=ExtResource( 26 )]
+position = Vector2( 544, -512 )
+health = 20
+direction = Vector2( -0.25, 0 )
+
+[node name="Enemy40" parent="Enemies/wave3" instance=ExtResource( 26 )]
+position = Vector2( 192, -736 )
+health = 20
+
+[node name="Enemy41" parent="Enemies/wave3" instance=ExtResource( 26 )]
+position = Vector2( 32, -512 )
+health = 20
+direction = Vector2( 0.25, 0 )
+
+[node name="Enemy43" parent="Enemies/wave3" instance=ExtResource( 26 )]
+position = Vector2( 32, -160 )
+health = 20
+direction = Vector2( 0.25, 0 )
+
+[node name="wave4" type="Node2D" parent="Enemies"]
+position = Vector2( -4, -4096 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Enemy10" parent="Enemies/wave4" instance=ExtResource( 3 )]
+position = Vector2( 128, -208 )
+health = 6
+
+[node name="Enemy17" parent="Enemies/wave4" instance=ExtResource( 3 )]
+position = Vector2( 420, -208 )
+health = 6
+
+[node name="Enemy18" parent="Enemies/wave4" instance=ExtResource( 3 )]
+position = Vector2( 96, -464 )
+health = 6
+
+[node name="Enemy19" parent="Enemies/wave4" instance=ExtResource( 3 )]
+position = Vector2( 192, -464 )
+health = 6
+
+[node name="Enemy16" parent="Enemies/wave4" instance=ExtResource( 3 )]
+position = Vector2( 324, -208 )
+health = 6
+
+[node name="Enemy11" parent="Enemies/wave4" instance=ExtResource( 3 )]
+position = Vector2( 229, -208 )
+health = 6
+
+[node name="Enemy21" parent="Enemies/wave4" instance=ExtResource( 3 )]
+position = Vector2( 128, -720 )
+health = 6
+
+[node name="Enemy22" parent="Enemies/wave4" instance=ExtResource( 3 )]
+position = Vector2( 420, -720 )
+health = 6
+
+[node name="Enemy23" parent="Enemies/wave4" instance=ExtResource( 3 )]
+position = Vector2( 324, -720 )
+health = 6
+
+[node name="Enemy24" parent="Enemies/wave4" instance=ExtResource( 3 )]
+position = Vector2( 229, -720 )
+health = 6
+
+[node name="Enemy13" parent="Enemies/wave4" instance=ExtResource( 3 )]
+position = Vector2( 384, -464 )
+health = 6
+
+[node name="Enemy20" parent="Enemies/wave4" instance=ExtResource( 3 )]
+position = Vector2( 480, -464 )
+health = 6
+
+[node name="Enemy14" parent="Enemies/wave4" instance=ExtResource( 3 )]
+position = Vector2( 288, -464 )
+health = 6
+
+[node name="Enemy12" parent="Enemies/wave4" instance=ExtResource( 3 )]
+position = Vector2( 96, -976 )
+health = 9
+
+[node name="Enemy29" parent="Enemies/wave4" instance=ExtResource( 3 )]
+position = Vector2( 480, -976 )
+health = 9
+
+[node name="Enemy30" parent="Enemies/wave4" instance=ExtResource( 3 )]
+position = Vector2( 32, -976 )
+health = 9
+
+[node name="Enemy31" parent="Enemies/wave4" instance=ExtResource( 3 )]
+position = Vector2( 160, -976 )
+health = 9
+
+[node name="Enemy32" parent="Enemies/wave4" instance=ExtResource( 3 )]
+position = Vector2( 288, -976 )
+health = 9
+
+[node name="Enemy15" parent="Enemies/wave4" instance=ExtResource( 3 )]
+position = Vector2( 352, -976 )
+health = 9
+
+[node name="Enemy33" parent="Enemies/wave4" instance=ExtResource( 3 )]
+position = Vector2( 416, -976 )
+health = 9
+
+[node name="Enemy34" parent="Enemies/wave4" instance=ExtResource( 3 )]
+position = Vector2( 544, -976 )
+health = 9
+
+[node name="Enemy35" parent="Enemies/wave4" instance=ExtResource( 3 )]
+position = Vector2( 224, -976 )
+health = 9
+
+[node name="Enemy36" parent="Enemies/wave4" instance=ExtResource( 26 )]
+position = Vector2( 544, -848 )
+health = 20
+
+[node name="Enemy38" parent="Enemies/wave4" instance=ExtResource( 26 )]
+position = Vector2( 544, -336 )
+health = 20
+direction = Vector2( -0.25, 0 )
+
+[node name="Enemy40" parent="Enemies/wave4" instance=ExtResource( 26 )]
+position = Vector2( 32, -848 )
+health = 20
+
+[node name="Enemy41" parent="Enemies/wave4" instance=ExtResource( 26 )]
+position = Vector2( 32, -592 )
+health = 20
+direction = Vector2( 0.25, 0 )
+
+[node name="Enemy43" parent="Enemies/wave4" instance=ExtResource( 26 )]
+position = Vector2( 32, -80 )
+health = 20
+direction = Vector2( 0.25, 0 )
+
+[node name="wave5" type="Node2D" parent="Enemies"]
+position = Vector2( -4, -5120 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Enemy10" parent="Enemies/wave5" instance=ExtResource( 3 )]
+position = Vector2( 139, -400 )
+health = 6
+
+[node name="Enemy17" parent="Enemies/wave5" instance=ExtResource( 3 )]
+position = Vector2( 431, -400 )
+health = 6
+
+[node name="Enemy18" parent="Enemies/wave5" instance=ExtResource( 3 )]
+position = Vector2( 96, -496 )
+health = 6
+
+[node name="Enemy19" parent="Enemies/wave5" instance=ExtResource( 3 )]
+position = Vector2( 192, -496 )
+health = 6
+
+[node name="Enemy16" parent="Enemies/wave5" instance=ExtResource( 3 )]
+position = Vector2( 335, -400 )
+health = 6
+
+[node name="Enemy11" parent="Enemies/wave5" instance=ExtResource( 3 )]
+position = Vector2( 240, -400 )
+health = 6
+
+[node name="Enemy13" parent="Enemies/wave5" instance=ExtResource( 3 )]
+position = Vector2( 384, -496 )
+health = 6
+
+[node name="Enemy20" parent="Enemies/wave5" instance=ExtResource( 3 )]
+position = Vector2( 480, -496 )
+health = 6
+
+[node name="Enemy14" parent="Enemies/wave5" instance=ExtResource( 3 )]
+position = Vector2( 288, -496 )
+health = 6
+
+[node name="Enemy12" parent="Enemies/wave5" instance=ExtResource( 3 )]
+position = Vector2( 96, -976 )
+health = 9
+
+[node name="Enemy29" parent="Enemies/wave5" instance=ExtResource( 3 )]
+position = Vector2( 480, -976 )
+health = 9
+
+[node name="Enemy30" parent="Enemies/wave5" instance=ExtResource( 3 )]
+position = Vector2( 32, -976 )
+health = 9
+
+[node name="Enemy31" parent="Enemies/wave5" instance=ExtResource( 3 )]
+position = Vector2( 160, -976 )
+health = 9
+
+[node name="Enemy32" parent="Enemies/wave5" instance=ExtResource( 3 )]
+position = Vector2( 288, -976 )
+health = 9
+
+[node name="Enemy15" parent="Enemies/wave5" instance=ExtResource( 3 )]
+position = Vector2( 352, -976 )
+health = 9
+
+[node name="Enemy33" parent="Enemies/wave5" instance=ExtResource( 3 )]
+position = Vector2( 416, -976 )
+health = 9
+
+[node name="Enemy34" parent="Enemies/wave5" instance=ExtResource( 3 )]
+position = Vector2( 544, -976 )
+health = 9
+
+[node name="Enemy35" parent="Enemies/wave5" instance=ExtResource( 3 )]
+position = Vector2( 224, -976 )
+health = 9
+
+[node name="Enemy38" parent="Enemies/wave5" instance=ExtResource( 26 )]
+position = Vector2( 512, -96 )
+health = 20
+direction = Vector2( -0.25, 0 )
+
+[node name="Enemy39" parent="Enemies/wave5" instance=ExtResource( 26 )]
+position = Vector2( 512, -272 )
+health = 20
+direction = Vector2( -0.25, 0 )
+
+[node name="Enemy" parent="Enemies/wave5" instance=ExtResource( 29 )]
+position = Vector2( 160, -752 )
+direction = Vector2( 0.3, 0.3 )
+
+[node name="Enemy2" parent="Enemies/wave5" instance=ExtResource( 29 )]
+position = Vector2( 416, -752 )
+direction = Vector2( -0.3, -0.3 )
+
+[node name="Enemy41" parent="Enemies/wave5" instance=ExtResource( 26 )]
+position = Vector2( 64, -272 )
+health = 20
+direction = Vector2( 0.25, 0 )
+
+[node name="Enemy43" parent="Enemies/wave5" instance=ExtResource( 26 )]
+position = Vector2( 64, -96 )
+health = 20
+direction = Vector2( 0.25, 0 )
+
+[node name="wave6" type="Node2D" parent="Enemies"]
+position = Vector2( -4, -6112 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Enemy18" parent="Enemies/wave6" instance=ExtResource( 3 )]
+position = Vector2( 96, -336 )
+health = 6
+
+[node name="Enemy19" parent="Enemies/wave6" instance=ExtResource( 3 )]
+position = Vector2( 192, -336 )
+health = 6
+
+[node name="Enemy13" parent="Enemies/wave6" instance=ExtResource( 3 )]
+position = Vector2( 384, -336 )
+health = 6
+
+[node name="Enemy20" parent="Enemies/wave6" instance=ExtResource( 3 )]
+position = Vector2( 480, -336 )
+health = 6
+
+[node name="Enemy14" parent="Enemies/wave6" instance=ExtResource( 3 )]
+position = Vector2( 288, -336 )
+health = 6
+
+[node name="Enemy12" parent="Enemies/wave6" instance=ExtResource( 3 )]
+position = Vector2( 96, -976 )
+health = 9
+
+[node name="Enemy29" parent="Enemies/wave6" instance=ExtResource( 3 )]
+position = Vector2( 480, -976 )
+health = 9
+
+[node name="Enemy30" parent="Enemies/wave6" instance=ExtResource( 3 )]
+position = Vector2( 32, -976 )
+health = 9
+
+[node name="Enemy31" parent="Enemies/wave6" instance=ExtResource( 3 )]
+position = Vector2( 160, -976 )
+health = 9
+
+[node name="Enemy32" parent="Enemies/wave6" instance=ExtResource( 3 )]
+position = Vector2( 288, -976 )
+health = 9
+
+[node name="Enemy15" parent="Enemies/wave6" instance=ExtResource( 3 )]
+position = Vector2( 352, -976 )
+health = 9
+
+[node name="Enemy33" parent="Enemies/wave6" instance=ExtResource( 3 )]
+position = Vector2( 416, -976 )
+health = 9
+
+[node name="Enemy34" parent="Enemies/wave6" instance=ExtResource( 3 )]
+position = Vector2( 544, -976 )
+health = 9
+
+[node name="Enemy35" parent="Enemies/wave6" instance=ExtResource( 3 )]
+position = Vector2( 224, -976 )
+health = 9
+
+[node name="Enemy36" parent="Enemies/wave6" instance=ExtResource( 26 )]
+position = Vector2( 352, -192 )
+health = 20
+
+[node name="Enemy40" parent="Enemies/wave6" instance=ExtResource( 26 )]
+position = Vector2( 224, -192 )
+health = 20
+
+[node name="Enemy3" parent="Enemies/wave6" instance=ExtResource( 29 )]
+position = Vector2( 0, -848 )
+
+[node name="Enemy4" parent="Enemies/wave6" instance=ExtResource( 29 )]
+position = Vector2( 288, -656 )
+
+[node name="Enemy6" parent="Enemies/wave6" instance=ExtResource( 29 )]
+position = Vector2( 288, -656 )
+direction = Vector2( -0.5, -0.5 )
+
+[node name="Enemy5" parent="Enemies/wave6" instance=ExtResource( 29 )]
+position = Vector2( 576, -848 )
+direction = Vector2( -0.5, -0.5 )
+
+[node name="wave7" type="Node2D" parent="Enemies"]
+position = Vector2( -4, -7168 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Enemy10" parent="Enemies/wave7" instance=ExtResource( 3 )]
+position = Vector2( 139, -400 )
+health = 6
+
+[node name="Enemy17" parent="Enemies/wave7" instance=ExtResource( 3 )]
+position = Vector2( 431, -400 )
+health = 6
+
+[node name="Enemy18" parent="Enemies/wave7" instance=ExtResource( 3 )]
+position = Vector2( 96, -496 )
+health = 6
+
+[node name="Enemy19" parent="Enemies/wave7" instance=ExtResource( 3 )]
+position = Vector2( 192, -496 )
+health = 6
+
+[node name="Enemy16" parent="Enemies/wave7" instance=ExtResource( 3 )]
+position = Vector2( 335, -400 )
+health = 6
+
+[node name="Enemy11" parent="Enemies/wave7" instance=ExtResource( 3 )]
+position = Vector2( 240, -400 )
+health = 6
+
+[node name="Enemy13" parent="Enemies/wave7" instance=ExtResource( 3 )]
+position = Vector2( 384, -496 )
+health = 6
+
+[node name="Enemy20" parent="Enemies/wave7" instance=ExtResource( 3 )]
+position = Vector2( 480, -496 )
+health = 6
+
+[node name="Enemy14" parent="Enemies/wave7" instance=ExtResource( 3 )]
+position = Vector2( 288, -496 )
+health = 6
+
+[node name="Enemy12" parent="Enemies/wave7" instance=ExtResource( 3 )]
+position = Vector2( 96, -976 )
+health = 6
+
+[node name="Enemy29" parent="Enemies/wave7" instance=ExtResource( 3 )]
+position = Vector2( 480, -976 )
+health = 6
+
+[node name="Enemy30" parent="Enemies/wave7" instance=ExtResource( 3 )]
+position = Vector2( 32, -976 )
+health = 6
+
+[node name="Enemy31" parent="Enemies/wave7" instance=ExtResource( 3 )]
+position = Vector2( 160, -976 )
+health = 6
+
+[node name="Enemy32" parent="Enemies/wave7" instance=ExtResource( 3 )]
+position = Vector2( 288, -976 )
+health = 6
+
+[node name="Enemy15" parent="Enemies/wave7" instance=ExtResource( 3 )]
+position = Vector2( 352, -976 )
+health = 6
+
+[node name="Enemy33" parent="Enemies/wave7" instance=ExtResource( 3 )]
+position = Vector2( 416, -976 )
+health = 6
+
+[node name="Enemy34" parent="Enemies/wave7" instance=ExtResource( 3 )]
+position = Vector2( 544, -976 )
+health = 6
+
+[node name="Enemy35" parent="Enemies/wave7" instance=ExtResource( 3 )]
+position = Vector2( 224, -976 )
+health = 6
+
+[node name="Enemy38" parent="Enemies/wave7" instance=ExtResource( 26 )]
+position = Vector2( 512, -96 )
+health = 20
+direction = Vector2( -0.25, 0 )
+
+[node name="Enemy43" parent="Enemies/wave7" instance=ExtResource( 26 )]
+position = Vector2( 64, -96 )
+health = 20
+direction = Vector2( 0.25, 0 )
+
+[node name="Enemy" parent="Enemies/wave7" instance=ExtResource( 28 )]
+position = Vector2( 0, -736 )
+direction = Vector2( 0.75, 0 )
+
+[node name="EnemyBishop" parent="Enemies/wave7/Enemy" instance=ExtResource( 29 )]
+position = Vector2( 64, 480 )
+
+[node name="EnemyBishop2" parent="Enemies/wave7/Enemy" instance=ExtResource( 29 )]
+position = Vector2( 512, 480 )
+direction = Vector2( -0.5, -0.5 )
+
+[node name="wave8" type="Node2D" parent="Enemies"]
+position = Vector2( -4, -8192 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Enemy10" parent="Enemies/wave8" instance=ExtResource( 3 )]
+position = Vector2( 128, -224 )
+health = 6
+
+[node name="Enemy17" parent="Enemies/wave8" instance=ExtResource( 3 )]
+position = Vector2( 448, -224 )
+health = 6
+
+[node name="Enemy16" parent="Enemies/wave8" instance=ExtResource( 3 )]
+position = Vector2( 512, -224 )
+health = 6
+
+[node name="Enemy11" parent="Enemies/wave8" instance=ExtResource( 3 )]
+position = Vector2( 64, -224 )
+health = 6
+
+[node name="Enemy38" parent="Enemies/wave8" instance=ExtResource( 26 )]
+position = Vector2( 512, -96 )
+health = 20
+direction = Vector2( -0.25, 0 )
+
+[node name="Enemy43" parent="Enemies/wave8" instance=ExtResource( 26 )]
+position = Vector2( 64, -96 )
+health = 20
+direction = Vector2( 0.25, 0 )
+
+[node name="EnemyQueen" parent="Enemies/wave8" instance=ExtResource( 28 )]
+position = Vector2( 576, -640 )
+direction = Vector2( -0.75, -0.75 )
+
+[node name="EnemyQueen2" parent="Enemies/wave8" instance=ExtResource( 28 )]
+position = Vector2( 0, -640 )
+direction = Vector2( 0.75, 0.75 )
+
+[node name="EnemyBishop" parent="Enemies/wave8" instance=ExtResource( 29 )]
+position = Vector2( 288, -256 )
+
+[node name="EnemyBishop2" parent="Enemies/wave8" instance=ExtResource( 29 )]
+position = Vector2( 288, -256 )
+direction = Vector2( -0.5, -0.5 )
+
+[node name="wave9" type="Node2D" parent="Enemies"]
+position = Vector2( -4, -9216 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Enemy10" parent="Enemies/wave9" instance=ExtResource( 3 )]
+position = Vector2( 139, -256 )
+health = 6
+
+[node name="Enemy17" parent="Enemies/wave9" instance=ExtResource( 3 )]
+position = Vector2( 431, -256 )
+health = 6
+
+[node name="Enemy18" parent="Enemies/wave9" instance=ExtResource( 3 )]
+position = Vector2( 96, -352 )
+health = 6
+
+[node name="Enemy19" parent="Enemies/wave9" instance=ExtResource( 3 )]
+position = Vector2( 192, -352 )
+health = 6
+
+[node name="Enemy16" parent="Enemies/wave9" instance=ExtResource( 3 )]
+position = Vector2( 335, -256 )
+health = 6
+
+[node name="Enemy11" parent="Enemies/wave9" instance=ExtResource( 3 )]
+position = Vector2( 240, -256 )
+health = 6
+
+[node name="Enemy13" parent="Enemies/wave9" instance=ExtResource( 3 )]
+position = Vector2( 384, -352 )
+health = 6
+
+[node name="Enemy20" parent="Enemies/wave9" instance=ExtResource( 3 )]
+position = Vector2( 480, -352 )
+health = 6
+
+[node name="Enemy14" parent="Enemies/wave9" instance=ExtResource( 3 )]
+position = Vector2( 288, -352 )
+health = 6
+
+[node name="Enemy12" parent="Enemies/wave9" instance=ExtResource( 3 )]
+position = Vector2( 96, -976 )
+health = 6
+
+[node name="Enemy29" parent="Enemies/wave9" instance=ExtResource( 3 )]
+position = Vector2( 480, -976 )
+health = 6
+
+[node name="Enemy30" parent="Enemies/wave9" instance=ExtResource( 3 )]
+position = Vector2( 32, -976 )
+health = 6
+
+[node name="Enemy31" parent="Enemies/wave9" instance=ExtResource( 3 )]
+position = Vector2( 160, -976 )
+health = 6
+
+[node name="Enemy32" parent="Enemies/wave9" instance=ExtResource( 3 )]
+position = Vector2( 288, -976 )
+health = 6
+
+[node name="Enemy15" parent="Enemies/wave9" instance=ExtResource( 3 )]
+position = Vector2( 352, -976 )
+health = 6
+
+[node name="Enemy33" parent="Enemies/wave9" instance=ExtResource( 3 )]
+position = Vector2( 416, -976 )
+health = 6
+
+[node name="Enemy34" parent="Enemies/wave9" instance=ExtResource( 3 )]
+position = Vector2( 544, -976 )
+health = 6
+
+[node name="Enemy35" parent="Enemies/wave9" instance=ExtResource( 3 )]
+position = Vector2( 224, -976 )
+health = 6
+
+[node name="Enemy36" parent="Enemies/wave9" instance=ExtResource( 26 )]
+position = Vector2( 384, -736 )
+health = 20
+
+[node name="Enemy37" parent="Enemies/wave9" instance=ExtResource( 26 )]
+position = Vector2( 64, -736 )
+health = 20
+
+[node name="Enemy42" parent="Enemies/wave9" instance=ExtResource( 26 )]
+position = Vector2( 512, -736 )
+health = 20
+
+[node name="Enemy38" parent="Enemies/wave9" instance=ExtResource( 26 )]
+position = Vector2( 544, -160 )
+health = 20
+direction = Vector2( -0.25, 0 )
+
+[node name="Enemy39" parent="Enemies/wave9" instance=ExtResource( 26 )]
+position = Vector2( 544, -512 )
+health = 20
+direction = Vector2( -0.25, 0 )
+
+[node name="Enemy40" parent="Enemies/wave9" instance=ExtResource( 26 )]
+position = Vector2( 192, -736 )
+health = 20
+
+[node name="Enemy41" parent="Enemies/wave9" instance=ExtResource( 26 )]
+position = Vector2( 32, -512 )
+health = 20
+direction = Vector2( 0.25, 0 )
+
+[node name="Enemy43" parent="Enemies/wave9" instance=ExtResource( 26 )]
+position = Vector2( 32, -160 )
+health = 20
+direction = Vector2( 0.25, 0 )
+
+[node name="wave10" type="Node2D" parent="Enemies"]
+position = Vector2( -4, -10240 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Enemy10" parent="Enemies/wave10" instance=ExtResource( 3 )]
+position = Vector2( 128, -208 )
+health = 6
+
+[node name="Enemy17" parent="Enemies/wave10" instance=ExtResource( 3 )]
+position = Vector2( 420, -208 )
+health = 6
+
+[node name="Enemy18" parent="Enemies/wave10" instance=ExtResource( 3 )]
+position = Vector2( 96, -464 )
+health = 6
+
+[node name="Enemy19" parent="Enemies/wave10" instance=ExtResource( 3 )]
+position = Vector2( 192, -464 )
+health = 6
+
+[node name="Enemy16" parent="Enemies/wave10" instance=ExtResource( 3 )]
+position = Vector2( 324, -208 )
+health = 6
+
+[node name="Enemy11" parent="Enemies/wave10" instance=ExtResource( 3 )]
+position = Vector2( 229, -208 )
+health = 6
+
+[node name="Enemy21" parent="Enemies/wave10" instance=ExtResource( 3 )]
+position = Vector2( 128, -720 )
+health = 6
+
+[node name="Enemy22" parent="Enemies/wave10" instance=ExtResource( 3 )]
+position = Vector2( 420, -720 )
+health = 6
+
+[node name="Enemy23" parent="Enemies/wave10" instance=ExtResource( 3 )]
+position = Vector2( 324, -720 )
+health = 6
+
+[node name="Enemy24" parent="Enemies/wave10" instance=ExtResource( 3 )]
+position = Vector2( 229, -720 )
+health = 6
+
+[node name="Enemy13" parent="Enemies/wave10" instance=ExtResource( 3 )]
+position = Vector2( 384, -464 )
+health = 6
+
+[node name="Enemy20" parent="Enemies/wave10" instance=ExtResource( 3 )]
+position = Vector2( 480, -464 )
+health = 6
+
+[node name="Enemy14" parent="Enemies/wave10" instance=ExtResource( 3 )]
+position = Vector2( 288, -464 )
+health = 6
+
+[node name="Enemy12" parent="Enemies/wave10" instance=ExtResource( 3 )]
+position = Vector2( 96, -976 )
+health = 9
+
+[node name="Enemy29" parent="Enemies/wave10" instance=ExtResource( 3 )]
+position = Vector2( 480, -976 )
+health = 9
+
+[node name="Enemy30" parent="Enemies/wave10" instance=ExtResource( 3 )]
+position = Vector2( 32, -976 )
+health = 9
+
+[node name="Enemy31" parent="Enemies/wave10" instance=ExtResource( 3 )]
+position = Vector2( 160, -976 )
+health = 9
+
+[node name="Enemy32" parent="Enemies/wave10" instance=ExtResource( 3 )]
+position = Vector2( 288, -976 )
+health = 9
+
+[node name="Enemy15" parent="Enemies/wave10" instance=ExtResource( 3 )]
+position = Vector2( 352, -976 )
+health = 9
+
+[node name="Enemy33" parent="Enemies/wave10" instance=ExtResource( 3 )]
+position = Vector2( 416, -976 )
+health = 9
+
+[node name="Enemy34" parent="Enemies/wave10" instance=ExtResource( 3 )]
+position = Vector2( 544, -976 )
+health = 9
+
+[node name="Enemy35" parent="Enemies/wave10" instance=ExtResource( 3 )]
+position = Vector2( 224, -976 )
+health = 9
+
+[node name="Enemy36" parent="Enemies/wave10" instance=ExtResource( 26 )]
+position = Vector2( 544, -848 )
+health = 20
+
+[node name="Enemy38" parent="Enemies/wave10" instance=ExtResource( 26 )]
+position = Vector2( 544, -336 )
+health = 20
+direction = Vector2( -0.25, 0 )
+
+[node name="Enemy40" parent="Enemies/wave10" instance=ExtResource( 26 )]
+position = Vector2( 32, -848 )
+health = 20
+
+[node name="Enemy41" parent="Enemies/wave10" instance=ExtResource( 26 )]
+position = Vector2( 32, -592 )
+health = 20
+direction = Vector2( 0.25, 0 )
+
+[node name="Enemy43" parent="Enemies/wave10" instance=ExtResource( 26 )]
+position = Vector2( 32, -80 )
+health = 20
+direction = Vector2( 0.25, 0 )
+
+[node name="wave11" type="Node2D" parent="Enemies"]
+position = Vector2( -4, -11264 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Enemy10" parent="Enemies/wave11" instance=ExtResource( 3 )]
+position = Vector2( 139, -400 )
+health = 6
+
+[node name="Enemy17" parent="Enemies/wave11" instance=ExtResource( 3 )]
+position = Vector2( 431, -400 )
+health = 6
+
+[node name="Enemy18" parent="Enemies/wave11" instance=ExtResource( 3 )]
+position = Vector2( 96, -496 )
+health = 6
+
+[node name="Enemy19" parent="Enemies/wave11" instance=ExtResource( 3 )]
+position = Vector2( 192, -496 )
+health = 6
+
+[node name="Enemy16" parent="Enemies/wave11" instance=ExtResource( 3 )]
+position = Vector2( 335, -400 )
+health = 6
+
+[node name="Enemy11" parent="Enemies/wave11" instance=ExtResource( 3 )]
+position = Vector2( 240, -400 )
+health = 6
+
+[node name="Enemy13" parent="Enemies/wave11" instance=ExtResource( 3 )]
+position = Vector2( 384, -496 )
+health = 6
+
+[node name="Enemy20" parent="Enemies/wave11" instance=ExtResource( 3 )]
+position = Vector2( 480, -496 )
+health = 6
+
+[node name="Enemy14" parent="Enemies/wave11" instance=ExtResource( 3 )]
+position = Vector2( 288, -496 )
+health = 6
+
+[node name="Enemy12" parent="Enemies/wave11" instance=ExtResource( 3 )]
+position = Vector2( 96, -976 )
+health = 9
+
+[node name="Enemy29" parent="Enemies/wave11" instance=ExtResource( 3 )]
+position = Vector2( 480, -976 )
+health = 9
+
+[node name="Enemy30" parent="Enemies/wave11" instance=ExtResource( 3 )]
+position = Vector2( 32, -976 )
+health = 9
+
+[node name="Enemy31" parent="Enemies/wave11" instance=ExtResource( 3 )]
+position = Vector2( 160, -976 )
+health = 9
+
+[node name="Enemy32" parent="Enemies/wave11" instance=ExtResource( 3 )]
+position = Vector2( 288, -976 )
+health = 9
+
+[node name="Enemy15" parent="Enemies/wave11" instance=ExtResource( 3 )]
+position = Vector2( 352, -976 )
+health = 9
+
+[node name="Enemy33" parent="Enemies/wave11" instance=ExtResource( 3 )]
+position = Vector2( 416, -976 )
+health = 9
+
+[node name="Enemy34" parent="Enemies/wave11" instance=ExtResource( 3 )]
+position = Vector2( 544, -976 )
+health = 9
+
+[node name="Enemy35" parent="Enemies/wave11" instance=ExtResource( 3 )]
+position = Vector2( 224, -976 )
+health = 9
+
+[node name="Enemy38" parent="Enemies/wave11" instance=ExtResource( 26 )]
+position = Vector2( 512, -96 )
+health = 20
+direction = Vector2( -0.25, 0 )
+
+[node name="Enemy39" parent="Enemies/wave11" instance=ExtResource( 26 )]
+position = Vector2( 512, -272 )
+health = 20
+direction = Vector2( -0.25, 0 )
+
+[node name="Enemy" parent="Enemies/wave11" instance=ExtResource( 29 )]
+position = Vector2( 160, -752 )
+direction = Vector2( 0.3, 0.3 )
+
+[node name="Enemy2" parent="Enemies/wave11" instance=ExtResource( 29 )]
+position = Vector2( 416, -752 )
+direction = Vector2( -0.3, -0.3 )
+
+[node name="Enemy41" parent="Enemies/wave11" instance=ExtResource( 26 )]
+position = Vector2( 64, -272 )
+health = 20
+direction = Vector2( 0.25, 0 )
+
+[node name="Enemy43" parent="Enemies/wave11" instance=ExtResource( 26 )]
+position = Vector2( 64, -96 )
+health = 20
+direction = Vector2( 0.25, 0 )
+
+[node name="wave12" type="Node2D" parent="Enemies"]
+position = Vector2( -4, -12256 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Enemy18" parent="Enemies/wave12" instance=ExtResource( 3 )]
+position = Vector2( 96, -336 )
+health = 6
+
+[node name="Enemy19" parent="Enemies/wave12" instance=ExtResource( 3 )]
+position = Vector2( 192, -336 )
+health = 6
+
+[node name="Enemy13" parent="Enemies/wave12" instance=ExtResource( 3 )]
+position = Vector2( 384, -336 )
+health = 6
+
+[node name="Enemy20" parent="Enemies/wave12" instance=ExtResource( 3 )]
+position = Vector2( 480, -336 )
+health = 6
+
+[node name="Enemy14" parent="Enemies/wave12" instance=ExtResource( 3 )]
+position = Vector2( 288, -336 )
+health = 6
+
+[node name="Enemy12" parent="Enemies/wave12" instance=ExtResource( 3 )]
+position = Vector2( 96, -976 )
+health = 9
+
+[node name="Enemy29" parent="Enemies/wave12" instance=ExtResource( 3 )]
+position = Vector2( 480, -976 )
+health = 9
+
+[node name="Enemy30" parent="Enemies/wave12" instance=ExtResource( 3 )]
+position = Vector2( 32, -976 )
+health = 9
+
+[node name="Enemy31" parent="Enemies/wave12" instance=ExtResource( 3 )]
+position = Vector2( 160, -976 )
+health = 9
+
+[node name="Enemy32" parent="Enemies/wave12" instance=ExtResource( 3 )]
+position = Vector2( 288, -976 )
+health = 9
+
+[node name="Enemy15" parent="Enemies/wave12" instance=ExtResource( 3 )]
+position = Vector2( 352, -976 )
+health = 9
+
+[node name="Enemy33" parent="Enemies/wave12" instance=ExtResource( 3 )]
+position = Vector2( 416, -976 )
+health = 9
+
+[node name="Enemy34" parent="Enemies/wave12" instance=ExtResource( 3 )]
+position = Vector2( 544, -976 )
+health = 9
+
+[node name="Enemy35" parent="Enemies/wave12" instance=ExtResource( 3 )]
+position = Vector2( 224, -976 )
+health = 9
+
+[node name="Enemy36" parent="Enemies/wave12" instance=ExtResource( 26 )]
+position = Vector2( 352, -192 )
+health = 20
+
+[node name="Enemy40" parent="Enemies/wave12" instance=ExtResource( 26 )]
+position = Vector2( 224, -192 )
+health = 20
+
+[node name="Enemy3" parent="Enemies/wave12" instance=ExtResource( 29 )]
+position = Vector2( 0, -848 )
+
+[node name="Enemy4" parent="Enemies/wave12" instance=ExtResource( 29 )]
+position = Vector2( 288, -656 )
+
+[node name="Enemy6" parent="Enemies/wave12" instance=ExtResource( 29 )]
+position = Vector2( 288, -656 )
+direction = Vector2( -0.5, -0.5 )
+
+[node name="Enemy5" parent="Enemies/wave12" instance=ExtResource( 29 )]
+position = Vector2( 576, -848 )
+direction = Vector2( -0.5, -0.5 )
+
+[node name="wave13" type="Node2D" parent="Enemies"]
+position = Vector2( -4, -13312 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Enemy10" parent="Enemies/wave13" instance=ExtResource( 3 )]
+position = Vector2( 139, -400 )
+health = 6
+
+[node name="Enemy17" parent="Enemies/wave13" instance=ExtResource( 3 )]
+position = Vector2( 431, -400 )
+health = 6
+
+[node name="Enemy18" parent="Enemies/wave13" instance=ExtResource( 3 )]
+position = Vector2( 96, -496 )
+health = 6
+
+[node name="Enemy19" parent="Enemies/wave13" instance=ExtResource( 3 )]
+position = Vector2( 192, -496 )
+health = 6
+
+[node name="Enemy16" parent="Enemies/wave13" instance=ExtResource( 3 )]
+position = Vector2( 335, -400 )
+health = 6
+
+[node name="Enemy11" parent="Enemies/wave13" instance=ExtResource( 3 )]
+position = Vector2( 240, -400 )
+health = 6
+
+[node name="Enemy13" parent="Enemies/wave13" instance=ExtResource( 3 )]
+position = Vector2( 384, -496 )
+health = 6
+
+[node name="Enemy20" parent="Enemies/wave13" instance=ExtResource( 3 )]
+position = Vector2( 480, -496 )
+health = 6
+
+[node name="Enemy14" parent="Enemies/wave13" instance=ExtResource( 3 )]
+position = Vector2( 288, -496 )
+health = 6
+
+[node name="Enemy12" parent="Enemies/wave13" instance=ExtResource( 3 )]
+position = Vector2( 96, -976 )
+health = 6
+
+[node name="Enemy29" parent="Enemies/wave13" instance=ExtResource( 3 )]
+position = Vector2( 480, -976 )
+health = 6
+
+[node name="Enemy30" parent="Enemies/wave13" instance=ExtResource( 3 )]
+position = Vector2( 32, -976 )
+health = 6
+
+[node name="Enemy31" parent="Enemies/wave13" instance=ExtResource( 3 )]
+position = Vector2( 160, -976 )
+health = 6
+
+[node name="Enemy32" parent="Enemies/wave13" instance=ExtResource( 3 )]
+position = Vector2( 288, -976 )
+health = 6
+
+[node name="Enemy15" parent="Enemies/wave13" instance=ExtResource( 3 )]
+position = Vector2( 352, -976 )
+health = 6
+
+[node name="Enemy33" parent="Enemies/wave13" instance=ExtResource( 3 )]
+position = Vector2( 416, -976 )
+health = 6
+
+[node name="Enemy34" parent="Enemies/wave13" instance=ExtResource( 3 )]
+position = Vector2( 544, -976 )
+health = 6
+
+[node name="Enemy35" parent="Enemies/wave13" instance=ExtResource( 3 )]
+position = Vector2( 224, -976 )
+health = 6
+
+[node name="Enemy38" parent="Enemies/wave13" instance=ExtResource( 26 )]
+position = Vector2( 512, -96 )
+health = 20
+direction = Vector2( -0.25, 0 )
+
+[node name="Enemy43" parent="Enemies/wave13" instance=ExtResource( 26 )]
+position = Vector2( 64, -96 )
+health = 20
+direction = Vector2( 0.25, 0 )
+
+[node name="Enemy" parent="Enemies/wave13" instance=ExtResource( 28 )]
+position = Vector2( 0, -736 )
+direction = Vector2( 0.75, 0 )
+
+[node name="EnemyBishop" parent="Enemies/wave13/Enemy" instance=ExtResource( 29 )]
+position = Vector2( 64, 480 )
+
+[node name="EnemyBishop2" parent="Enemies/wave13/Enemy" instance=ExtResource( 29 )]
+position = Vector2( 512, 480 )
+direction = Vector2( -0.5, -0.5 )
+
+[node name="wave14" type="Node2D" parent="Enemies"]
+position = Vector2( -4, -14336 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Enemy10" parent="Enemies/wave14" instance=ExtResource( 3 )]
+position = Vector2( 128, -224 )
+health = 6
+
+[node name="Enemy17" parent="Enemies/wave14" instance=ExtResource( 3 )]
+position = Vector2( 448, -224 )
+health = 6
+
+[node name="Enemy16" parent="Enemies/wave14" instance=ExtResource( 3 )]
+position = Vector2( 512, -224 )
+health = 6
+
+[node name="Enemy11" parent="Enemies/wave14" instance=ExtResource( 3 )]
+position = Vector2( 64, -224 )
+health = 6
+
+[node name="Enemy12" parent="Enemies/wave14" instance=ExtResource( 3 )]
+position = Vector2( 96, -976 )
+health = 9
+
+[node name="Enemy29" parent="Enemies/wave14" instance=ExtResource( 3 )]
+position = Vector2( 480, -976 )
+health = 9
+
+[node name="Enemy30" parent="Enemies/wave14" instance=ExtResource( 3 )]
+position = Vector2( 32, -976 )
+health = 9
+
+[node name="Enemy31" parent="Enemies/wave14" instance=ExtResource( 3 )]
+position = Vector2( 160, -976 )
+health = 9
+
+[node name="Enemy32" parent="Enemies/wave14" instance=ExtResource( 3 )]
+position = Vector2( 288, -976 )
+health = 9
+
+[node name="Enemy15" parent="Enemies/wave14" instance=ExtResource( 3 )]
+position = Vector2( 352, -976 )
+health = 9
+
+[node name="Enemy33" parent="Enemies/wave14" instance=ExtResource( 3 )]
+position = Vector2( 416, -976 )
+health = 9
+
+[node name="Enemy34" parent="Enemies/wave14" instance=ExtResource( 3 )]
+position = Vector2( 544, -976 )
+health = 9
+
+[node name="Enemy35" parent="Enemies/wave14" instance=ExtResource( 3 )]
+position = Vector2( 224, -976 )
+health = 9
+
+[node name="Enemy38" parent="Enemies/wave14" instance=ExtResource( 26 )]
+position = Vector2( 512, -96 )
+health = 20
+direction = Vector2( -0.25, 0 )
+
+[node name="Enemy43" parent="Enemies/wave14" instance=ExtResource( 26 )]
+position = Vector2( 64, -96 )
+health = 20
+direction = Vector2( 0.25, 0 )
+
+[node name="EnemyQueen" parent="Enemies/wave14" instance=ExtResource( 28 )]
+position = Vector2( 576, -816 )
+direction = Vector2( -0.75, -0.75 )
+
+[node name="EnemyQueen2" parent="Enemies/wave14" instance=ExtResource( 28 )]
+position = Vector2( 0, -816 )
+direction = Vector2( 0.75, 0.75 )
+
+[node name="EnemyBishop" parent="Enemies/wave14" instance=ExtResource( 29 )]
+position = Vector2( 288, -256 )
+
+[node name="EnemyBishop2" parent="Enemies/wave14" instance=ExtResource( 29 )]
+position = Vector2( 288, -256 )
+direction = Vector2( -0.5, -0.5 )
+
+[node name="wave15" type="Node2D" parent="Enemies"]
+position = Vector2( -4, -15360 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Enemy10" parent="Enemies/wave15" instance=ExtResource( 3 )]
+position = Vector2( 139, -400 )
+health = 6
+
+[node name="Enemy17" parent="Enemies/wave15" instance=ExtResource( 3 )]
+position = Vector2( 431, -400 )
+health = 6
+
+[node name="Enemy18" parent="Enemies/wave15" instance=ExtResource( 3 )]
+position = Vector2( 96, -496 )
+health = 6
+
+[node name="Enemy19" parent="Enemies/wave15" instance=ExtResource( 3 )]
+position = Vector2( 192, -496 )
+health = 6
+
+[node name="Enemy16" parent="Enemies/wave15" instance=ExtResource( 3 )]
+position = Vector2( 335, -400 )
+health = 6
+
+[node name="Enemy11" parent="Enemies/wave15" instance=ExtResource( 3 )]
+position = Vector2( 240, -400 )
+health = 6
+
+[node name="Enemy13" parent="Enemies/wave15" instance=ExtResource( 3 )]
+position = Vector2( 384, -496 )
+health = 6
+
+[node name="Enemy20" parent="Enemies/wave15" instance=ExtResource( 3 )]
+position = Vector2( 480, -496 )
+health = 6
+
+[node name="Enemy14" parent="Enemies/wave15" instance=ExtResource( 3 )]
+position = Vector2( 288, -496 )
+health = 6
+
+[node name="Enemy12" parent="Enemies/wave15" instance=ExtResource( 3 )]
+position = Vector2( 96, -976 )
+health = 9
+
+[node name="Enemy29" parent="Enemies/wave15" instance=ExtResource( 3 )]
+position = Vector2( 480, -976 )
+health = 9
+
+[node name="Enemy30" parent="Enemies/wave15" instance=ExtResource( 3 )]
+position = Vector2( 32, -976 )
+health = 9
+
+[node name="Enemy31" parent="Enemies/wave15" instance=ExtResource( 3 )]
+position = Vector2( 160, -976 )
+health = 9
+
+[node name="Enemy32" parent="Enemies/wave15" instance=ExtResource( 3 )]
+position = Vector2( 288, -976 )
+health = 9
+
+[node name="Enemy15" parent="Enemies/wave15" instance=ExtResource( 3 )]
+position = Vector2( 352, -976 )
+health = 9
+
+[node name="Enemy33" parent="Enemies/wave15" instance=ExtResource( 3 )]
+position = Vector2( 416, -976 )
+health = 9
+
+[node name="Enemy34" parent="Enemies/wave15" instance=ExtResource( 3 )]
+position = Vector2( 544, -976 )
+health = 9
+
+[node name="Enemy35" parent="Enemies/wave15" instance=ExtResource( 3 )]
+position = Vector2( 224, -976 )
+health = 9
+
+[node name="Enemy38" parent="Enemies/wave15" instance=ExtResource( 26 )]
+position = Vector2( 512, -96 )
+health = 20
+direction = Vector2( -0.25, 0 )
+
+[node name="Enemy39" parent="Enemies/wave15" instance=ExtResource( 26 )]
+position = Vector2( 512, -272 )
+health = 20
+direction = Vector2( -0.25, 0 )
+
+[node name="Enemy" parent="Enemies/wave15" instance=ExtResource( 29 )]
+position = Vector2( 160, -752 )
+direction = Vector2( 0.3, 0.3 )
+
+[node name="Enemy2" parent="Enemies/wave15" instance=ExtResource( 29 )]
+position = Vector2( 416, -752 )
+direction = Vector2( -0.3, -0.3 )
+
+[node name="Enemy41" parent="Enemies/wave15" instance=ExtResource( 26 )]
+position = Vector2( 64, -272 )
+health = 20
+direction = Vector2( 0.25, 0 )
+
+[node name="Enemy43" parent="Enemies/wave15" instance=ExtResource( 26 )]
+position = Vector2( 64, -96 )
+health = 20
+direction = Vector2( 0.25, 0 )
+
+[node name="wave16" type="Node2D" parent="Enemies"]
+position = Vector2( -4, -16352 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Enemy18" parent="Enemies/wave16" instance=ExtResource( 3 )]
+position = Vector2( 96, -336 )
+health = 6
+
+[node name="Enemy19" parent="Enemies/wave16" instance=ExtResource( 3 )]
+position = Vector2( 192, -336 )
+health = 6
+
+[node name="Enemy13" parent="Enemies/wave16" instance=ExtResource( 3 )]
+position = Vector2( 384, -336 )
+health = 6
+
+[node name="Enemy20" parent="Enemies/wave16" instance=ExtResource( 3 )]
+position = Vector2( 480, -336 )
+health = 6
+
+[node name="Enemy14" parent="Enemies/wave16" instance=ExtResource( 3 )]
+position = Vector2( 288, -336 )
+health = 6
+
+[node name="Enemy12" parent="Enemies/wave16" instance=ExtResource( 3 )]
+position = Vector2( 96, -976 )
+health = 9
+
+[node name="Enemy29" parent="Enemies/wave16" instance=ExtResource( 3 )]
+position = Vector2( 480, -976 )
+health = 9
+
+[node name="Enemy30" parent="Enemies/wave16" instance=ExtResource( 3 )]
+position = Vector2( 32, -976 )
+health = 9
+
+[node name="Enemy31" parent="Enemies/wave16" instance=ExtResource( 3 )]
+position = Vector2( 160, -976 )
+health = 9
+
+[node name="Enemy32" parent="Enemies/wave16" instance=ExtResource( 3 )]
+position = Vector2( 288, -976 )
+health = 9
+
+[node name="Enemy15" parent="Enemies/wave16" instance=ExtResource( 3 )]
+position = Vector2( 352, -976 )
+health = 9
+
+[node name="Enemy33" parent="Enemies/wave16" instance=ExtResource( 3 )]
+position = Vector2( 416, -976 )
+health = 9
+
+[node name="Enemy34" parent="Enemies/wave16" instance=ExtResource( 3 )]
+position = Vector2( 544, -976 )
+health = 9
+
+[node name="Enemy35" parent="Enemies/wave16" instance=ExtResource( 3 )]
+position = Vector2( 224, -976 )
+health = 9
+
+[node name="Enemy36" parent="Enemies/wave16" instance=ExtResource( 26 )]
+position = Vector2( 352, -192 )
+health = 20
+
+[node name="Enemy40" parent="Enemies/wave16" instance=ExtResource( 26 )]
+position = Vector2( 224, -192 )
+health = 20
+
+[node name="Enemy3" parent="Enemies/wave16" instance=ExtResource( 29 )]
+position = Vector2( 0, -848 )
+
+[node name="Enemy4" parent="Enemies/wave16" instance=ExtResource( 29 )]
+position = Vector2( 288, -656 )
+
+[node name="Enemy6" parent="Enemies/wave16" instance=ExtResource( 29 )]
+position = Vector2( 288, -656 )
+direction = Vector2( -0.5, -0.5 )
+
+[node name="Enemy5" parent="Enemies/wave16" instance=ExtResource( 29 )]
+position = Vector2( 576, -848 )
+direction = Vector2( -0.5, -0.5 )
+
+[node name="wave17" type="Node2D" parent="Enemies"]
+position = Vector2( -4, -17408 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Enemy10" parent="Enemies/wave17" instance=ExtResource( 3 )]
+position = Vector2( 139, -400 )
+health = 6
+
+[node name="Enemy17" parent="Enemies/wave17" instance=ExtResource( 3 )]
+position = Vector2( 431, -400 )
+health = 6
+
+[node name="Enemy18" parent="Enemies/wave17" instance=ExtResource( 3 )]
+position = Vector2( 96, -496 )
+health = 6
+
+[node name="Enemy19" parent="Enemies/wave17" instance=ExtResource( 3 )]
+position = Vector2( 192, -496 )
+health = 6
+
+[node name="Enemy16" parent="Enemies/wave17" instance=ExtResource( 3 )]
+position = Vector2( 335, -400 )
+health = 6
+
+[node name="Enemy11" parent="Enemies/wave17" instance=ExtResource( 3 )]
+position = Vector2( 240, -400 )
+health = 6
+
+[node name="Enemy13" parent="Enemies/wave17" instance=ExtResource( 3 )]
+position = Vector2( 384, -496 )
+health = 6
+
+[node name="Enemy20" parent="Enemies/wave17" instance=ExtResource( 3 )]
+position = Vector2( 480, -496 )
+health = 6
+
+[node name="Enemy14" parent="Enemies/wave17" instance=ExtResource( 3 )]
+position = Vector2( 288, -496 )
+health = 6
+
+[node name="Enemy12" parent="Enemies/wave17" instance=ExtResource( 3 )]
+position = Vector2( 96, -832 )
+health = 6
+
+[node name="Enemy29" parent="Enemies/wave17" instance=ExtResource( 3 )]
+position = Vector2( 480, -832 )
+health = 6
+
+[node name="Enemy30" parent="Enemies/wave17" instance=ExtResource( 3 )]
+position = Vector2( 32, -832 )
+health = 6
+
+[node name="Enemy31" parent="Enemies/wave17" instance=ExtResource( 3 )]
+position = Vector2( 160, -832 )
+health = 6
+
+[node name="Enemy32" parent="Enemies/wave17" instance=ExtResource( 3 )]
+position = Vector2( 288, -832 )
+health = 6
+
+[node name="Enemy15" parent="Enemies/wave17" instance=ExtResource( 3 )]
+position = Vector2( 352, -832 )
+health = 6
+
+[node name="Enemy33" parent="Enemies/wave17" instance=ExtResource( 3 )]
+position = Vector2( 416, -832 )
+health = 6
+
+[node name="Enemy34" parent="Enemies/wave17" instance=ExtResource( 3 )]
+position = Vector2( 544, -832 )
+health = 6
+
+[node name="Enemy35" parent="Enemies/wave17" instance=ExtResource( 3 )]
+position = Vector2( 224, -832 )
+health = 6
+
+[node name="Enemy38" parent="Enemies/wave17" instance=ExtResource( 26 )]
+position = Vector2( 512, -96 )
+health = 20
+direction = Vector2( -0.25, 0 )
+
+[node name="Enemy43" parent="Enemies/wave17" instance=ExtResource( 26 )]
+position = Vector2( 64, -96 )
+health = 20
+direction = Vector2( 0.25, 0 )
+
+[node name="Enemy" parent="Enemies/wave17" instance=ExtResource( 28 )]
+position = Vector2( 0, -736 )
+direction = Vector2( 0.75, 0 )
+
+[node name="EnemyBishop" parent="Enemies/wave17/Enemy" instance=ExtResource( 29 )]
+position = Vector2( 64, 480 )
+
+[node name="EnemyBishop2" parent="Enemies/wave17/Enemy" instance=ExtResource( 29 )]
+position = Vector2( 512, 480 )
+direction = Vector2( -0.5, -0.5 )
+
+[node name="wave18" type="Node2D" parent="Enemies"]
+position = Vector2( -4, -18432 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Enemy10" parent="Enemies/wave18" instance=ExtResource( 3 )]
+position = Vector2( 128, -224 )
+health = 15
+direction = Vector2( 0, 0.25 )
+
+[node name="Enemy17" parent="Enemies/wave18" instance=ExtResource( 3 )]
+position = Vector2( 448, -224 )
+health = 15
+direction = Vector2( 0, 0.25 )
+
+[node name="Enemy16" parent="Enemies/wave18" instance=ExtResource( 3 )]
+position = Vector2( 512, -224 )
+health = 15
+direction = Vector2( 0, 0.25 )
+
+[node name="Enemy11" parent="Enemies/wave18" instance=ExtResource( 3 )]
+position = Vector2( 64, -224 )
+health = 15
+direction = Vector2( 0, 0.25 )
+
+[node name="Enemy12" parent="Enemies/wave18" instance=ExtResource( 3 )]
+position = Vector2( 96, -976 )
+health = 15
+direction = Vector2( 0, 0.25 )
+
+[node name="Enemy29" parent="Enemies/wave18" instance=ExtResource( 3 )]
+position = Vector2( 480, -976 )
+health = 15
+direction = Vector2( 0, 0.25 )
+
+[node name="Enemy30" parent="Enemies/wave18" instance=ExtResource( 3 )]
+position = Vector2( 32, -976 )
+health = 15
+direction = Vector2( 0, 0.25 )
+
+[node name="Enemy31" parent="Enemies/wave18" instance=ExtResource( 3 )]
+position = Vector2( 160, -976 )
+health = 15
+direction = Vector2( 0, 0.25 )
+
+[node name="Enemy32" parent="Enemies/wave18" instance=ExtResource( 3 )]
+position = Vector2( 288, -976 )
+health = 15
+direction = Vector2( 0, 0.25 )
+
+[node name="Enemy15" parent="Enemies/wave18" instance=ExtResource( 3 )]
+position = Vector2( 352, -976 )
+health = 15
+direction = Vector2( 0, 0.25 )
+
+[node name="Enemy33" parent="Enemies/wave18" instance=ExtResource( 3 )]
+position = Vector2( 416, -976 )
+health = 15
+direction = Vector2( 0, 0.25 )
+
+[node name="Enemy34" parent="Enemies/wave18" instance=ExtResource( 3 )]
+position = Vector2( 544, -976 )
+health = 15
+direction = Vector2( 0, 0.25 )
+
+[node name="Enemy35" parent="Enemies/wave18" instance=ExtResource( 3 )]
+position = Vector2( 224, -976 )
+health = 15
+direction = Vector2( 0, 0.25 )
+
+[node name="Enemy38" parent="Enemies/wave18" instance=ExtResource( 26 )]
+position = Vector2( 512, -96 )
+health = 30
+direction = Vector2( -0.25, 0 )
+
+[node name="Enemy43" parent="Enemies/wave18" instance=ExtResource( 26 )]
+position = Vector2( 64, -96 )
+health = 30
+direction = Vector2( 0.25, 0 )
+
+[node name="EnemyQueen" parent="Enemies/wave18" instance=ExtResource( 28 )]
+position = Vector2( 576, -816 )
+scale = Vector2( 1.1, 1.1 )
+health = 100
+direction = Vector2( -0.1, -0.1 )
+
+[node name="EnemyQueen2" parent="Enemies/wave18" instance=ExtResource( 28 )]
+position = Vector2( 0, -816 )
+scale = Vector2( 1.1, 1.1 )
+health = 100
+direction = Vector2( 0.1, 0.1 )
+
+[node name="EnemyBishop" parent="Enemies/wave18" instance=ExtResource( 29 )]
+position = Vector2( 288, -256 )
+health = 50
+direction = Vector2( 0.25, 0.25 )
+
+[node name="EnemyBishop2" parent="Enemies/wave18" instance=ExtResource( 29 )]
+position = Vector2( 288, -256 )
+health = 50
+direction = Vector2( -0.25, -0.25 )
+
+[node name="Boss" type="Node2D" parent="Enemies"]
+position = Vector2( -4, -18432 )
+
+[node name="Boss" parent="Enemies/Boss" instance=ExtResource( 30 )]
+position = Vector2( 288, -800 )
 
 [node name="Backgrounds" type="Node" parent="."]
 
@@ -365,8 +2076,19 @@ __meta__ = {
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 25 )
+volume_db = -2.0
 autoplay = true
 
 [node name="UI" parent="." instance=ExtResource( 27 )]
 
+[connection signal="tree_exited" from="Enemies/Boss/Boss" to="." method="_on_Boss_tree_exited"]
+
 [editable path="Player"]
+[editable path="Player/GhostPath/GhostSpawn0/Ghost"]
+[editable path="Player/GhostPath/GhostSpawn1/Ghost"]
+[editable path="Player/GhostPath/GhostSpawn2/Ghost"]
+[editable path="Player/GhostPath/GhostSpawn3/Ghost"]
+[editable path="Player/GhostPath/GhostSpawn4/Ghost"]
+[editable path="Player/GhostPath/GhostSpawn5/Ghost"]
+[editable path="Player/GhostPath/GhostSpawn6/Ghost"]
+[editable path="Player/GhostPath/GhostSpawn7/Ghost"]

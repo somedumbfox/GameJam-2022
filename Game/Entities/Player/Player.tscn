@@ -200,55 +200,84 @@ curve = SubResource( 2 )
 
 [node name="GhostSpawn0" type="PathFollow2D" parent="GhostPath" index="0"]
 position = Vector2( -100, -100 )
+rotate = false
 script = ExtResource( 1 )
 
 [node name="Ghost" parent="GhostPath/GhostSpawn0" index="0" instance=ExtResource( 9 )]
 
+[node name="EntitySprite" parent="GhostPath/GhostSpawn0/Ghost" index="1"]
+animation = "ghost1"
+
 [node name="GhostSpawn1" type="PathFollow2D" parent="GhostPath" index="1"]
 position = Vector2( -100, -100 )
 offset = 69.4953
+rotate = false
 script = ExtResource( 1 )
 
 [node name="Ghost" parent="GhostPath/GhostSpawn1" index="0" instance=ExtResource( 9 )]
 
+[node name="EntitySprite" parent="GhostPath/GhostSpawn1/Ghost" index="1"]
+animation = "ghost2"
+
 [node name="GhostSpawn2" type="PathFollow2D" parent="GhostPath" index="2"]
 position = Vector2( -100, -100 )
 offset = 138.991
+rotate = false
 script = ExtResource( 1 )
 
 [node name="Ghost" parent="GhostPath/GhostSpawn2" index="0" instance=ExtResource( 9 )]
 
+[node name="EntitySprite" parent="GhostPath/GhostSpawn2/Ghost" index="1"]
+animation = "ghost3"
+
 [node name="GhostSpawn3" type="PathFollow2D" parent="GhostPath" index="3"]
 position = Vector2( -100, -100 )
 offset = 208.486
+rotate = false
 script = ExtResource( 1 )
 
 [node name="Ghost" parent="GhostPath/GhostSpawn3" index="0" instance=ExtResource( 9 )]
 
+[node name="EntitySprite" parent="GhostPath/GhostSpawn3/Ghost" index="1"]
+animation = "ghost4"
+
 [node name="GhostSpawn4" type="PathFollow2D" parent="GhostPath" index="4"]
 position = Vector2( -100, -100 )
 offset = 277.981
+rotate = false
 script = ExtResource( 1 )
 
 [node name="Ghost" parent="GhostPath/GhostSpawn4" index="0" instance=ExtResource( 9 )]
 
+[node name="EntitySprite" parent="GhostPath/GhostSpawn4/Ghost" index="1"]
+animation = "ghost5"
+
 [node name="GhostSpawn5" type="PathFollow2D" parent="GhostPath" index="5"]
 position = Vector2( -100, -100 )
 offset = 347.477
+rotate = false
 script = ExtResource( 1 )
 
 [node name="Ghost" parent="GhostPath/GhostSpawn5" index="0" instance=ExtResource( 9 )]
 
+[node name="EntitySprite" parent="GhostPath/GhostSpawn5/Ghost" index="1"]
+animation = "ghost6"
+
 [node name="GhostSpawn6" type="PathFollow2D" parent="GhostPath" index="6"]
 position = Vector2( -100, -100 )
 offset = 416.972
+rotate = false
 script = ExtResource( 1 )
 
 [node name="Ghost" parent="GhostPath/GhostSpawn6" index="0" instance=ExtResource( 9 )]
 
+[node name="EntitySprite" parent="GhostPath/GhostSpawn6/Ghost" index="1"]
+animation = "ghost7"
+
 [node name="GhostSpawn7" type="PathFollow2D" parent="GhostPath" index="7"]
 position = Vector2( -100, -100 )
 offset = 486.467
+rotate = false
 script = ExtResource( 1 )
 
 [node name="Ghost" parent="GhostPath/GhostSpawn7" index="0" instance=ExtResource( 9 )]
@@ -262,3 +291,12 @@ one_shot = true
 [connection signal="timeout" from="Guns/gunTimer" to="Guns/triShot" method="_on_gunTimer_timeout"]
 [connection signal="timeout" from="Guns/gunTimer" to="Guns/quintSpread" method="_on_gunTimer_timeout"]
 [connection signal="timeout" from="ghostTimer" to="." method="_on_ghostTimer_timeout"]
+
+[editable path="GhostPath/GhostSpawn0/Ghost"]
+[editable path="GhostPath/GhostSpawn1/Ghost"]
+[editable path="GhostPath/GhostSpawn2/Ghost"]
+[editable path="GhostPath/GhostSpawn3/Ghost"]
+[editable path="GhostPath/GhostSpawn4/Ghost"]
+[editable path="GhostPath/GhostSpawn5/Ghost"]
+[editable path="GhostPath/GhostSpawn6/Ghost"]
+[editable path="GhostPath/GhostSpawn7/Ghost"]

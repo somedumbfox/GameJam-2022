@@ -3,10 +3,9 @@
 [ext_resource path="res://Entities/Player/Ghosts/Ghost.gd" type="Script" id=1]
 [ext_resource path="res://Entities/Entity/Entity.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Entities/Player/Ghosts/ghost_shape.tres" type="Shape2D" id=3]
-[ext_resource path="res://Entities/Player/player_sprites.tres" type="SpriteFrames" id=4]
+[ext_resource path="res://Entities/Player/Ghosts/ghostSprites.tres" type="SpriteFrames" id=4]
 
 [node name="Ghost" instance=ExtResource( 2 )]
-rotation = 1.5708
 script = ExtResource( 1 )
 
 [node name="EntityCollisionDetector" parent="." index="0"]
@@ -20,7 +19,7 @@ shape = ExtResource( 3 )
 
 [node name="EntitySprite" parent="." index="1"]
 modulate = Color( 1, 1, 1, 0.694118 )
-scale = Vector2( 0.25, 0.25 )
 frames = ExtResource( 4 )
+animation = "ghost8"
 
 [connection signal="area_entered" from="EntityCollisionDetector" to="." method="_on_EntityCollisionDetector_area_entered"]
