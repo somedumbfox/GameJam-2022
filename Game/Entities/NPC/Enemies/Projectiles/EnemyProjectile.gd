@@ -3,7 +3,7 @@ extends KinematicBody2D
 const SPEED = 500
 export var power = 1
 
-var direction = Vector2(0,1)
+export var direction = Vector2(0,1)
 
 
 # Called when the node enters the scene tree for the first time.
@@ -13,6 +13,13 @@ func _ready():
 
 #Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
+
+func hit():
+	$AnimationPlayer.play("hit")
+
+func absorb():
+	$AnimationPlayer.play("absorb")
+	pass
 
 func _physics_process(_delta):
 	move()

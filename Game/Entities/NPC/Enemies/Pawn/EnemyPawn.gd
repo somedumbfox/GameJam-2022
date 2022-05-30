@@ -1,7 +1,7 @@
 extends "res://Entities/Entity/Entity.gd"
 
 
-var SPEED = 150
+export var SPEED = 150
 var offScreen = true
 
 
@@ -37,7 +37,10 @@ func _on_EntityCollisionDetector_area_entered(area:Area2D):
 
 	$RichTextLabel.text = String(health)
 	if(health <= 0 or area.get_collision_layer_bit(4)):
-		queue_free()
+		SPEED = 0
+		get_tree().call_group("UI", "increment_score", scoreValue)
+		$Gun/gunTimer.stop()
+		$AnimationPlayer.play("die")
 
 func play_hit():
 	$AnimationPlayer.play("RESET")

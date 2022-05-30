@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://Levels/MainLevel/MainLevel.gd" type="Script" id=1]
 [ext_resource path="res://Entities/Player/Player.tscn" type="PackedScene" id=2]
@@ -25,6 +25,8 @@
 [ext_resource path="res://Levels/MainLevel/backgrounds/bg14.png" type="Texture" id=23]
 [ext_resource path="res://Levels/MainLevel/backgrounds/bg9.png" type="Texture" id=24]
 [ext_resource path="res://Levels/MainLevel/BGM/rins-theme_full.ogg" type="AudioStream" id=25]
+[ext_resource path="res://Entities/NPC/Enemies/Rook/EnemyRook.tscn" type="PackedScene" id=26]
+[ext_resource path="res://UI/UI.tscn" type="PackedScene" id=27]
 
 [node name="MainLevel" type="Node2D"]
 script = ExtResource( 1 )
@@ -32,15 +34,6 @@ __meta__ = {
 "_edit_horizontal_guides_": [ 0.0 ],
 "_edit_vertical_guides_": [ 576.0 ]
 }
-
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer"]
-margin_left = 10.0
-margin_top = 10.0
-margin_right = 582.0
-margin_bottom = 40.0
-text = "Main Level"
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 300, 841 )
@@ -53,244 +46,327 @@ z_index = 1
 [node name="wave0" type="Node2D" parent="Enemies"]
 position = Vector2( -4, -48 )
 
-[node name="EnemyPawn0" parent="Enemies/wave0" instance=ExtResource( 3 )]
+[node name="Enemy0" parent="Enemies/wave0" instance=ExtResource( 3 )]
 position = Vector2( 32, -64 )
 
-[node name="EnemyPawn1" parent="Enemies/wave0" instance=ExtResource( 3 )]
+[node name="Enemy1" parent="Enemies/wave0" instance=ExtResource( 3 )]
 position = Vector2( 384, -272 )
 
-[node name="EnemyPawn2" parent="Enemies/wave0" instance=ExtResource( 3 )]
+[node name="Enemy2" parent="Enemies/wave0" instance=ExtResource( 3 )]
 position = Vector2( 320, -272 )
 
-[node name="EnemyPawn3" parent="Enemies/wave0" instance=ExtResource( 3 )]
+[node name="Enemy3" parent="Enemies/wave0" instance=ExtResource( 3 )]
 position = Vector2( 224, -64 )
 
-[node name="EnemyPawn4" parent="Enemies/wave0" instance=ExtResource( 3 )]
+[node name="Enemy4" parent="Enemies/wave0" instance=ExtResource( 3 )]
 position = Vector2( 96, -64 )
 
-[node name="EnemyPawn5" parent="Enemies/wave0" instance=ExtResource( 3 )]
+[node name="Enemy5" parent="Enemies/wave0" instance=ExtResource( 3 )]
 position = Vector2( 448, -272 )
 
-[node name="EnemyPawn6" parent="Enemies/wave0" instance=ExtResource( 3 )]
+[node name="Enemy6" parent="Enemies/wave0" instance=ExtResource( 3 )]
 position = Vector2( 160, -64 )
 
-[node name="EnemyPawn7" parent="Enemies/wave0" instance=ExtResource( 3 )]
+[node name="Enemy7" parent="Enemies/wave0" instance=ExtResource( 3 )]
 position = Vector2( 32, -432 )
 
-[node name="EnemyPawn8" parent="Enemies/wave0" instance=ExtResource( 3 )]
+[node name="Enemy8" parent="Enemies/wave0" instance=ExtResource( 3 )]
 position = Vector2( 512, -272 )
 
-[node name="EnemyPawn9" parent="Enemies/wave0" instance=ExtResource( 3 )]
+[node name="Enemy9" parent="Enemies/wave0" instance=ExtResource( 3 )]
 position = Vector2( 160, -432 )
 
-[node name="EnemyPawn10" parent="Enemies/wave0" instance=ExtResource( 3 )]
+[node name="Enemy10" parent="Enemies/wave0" instance=ExtResource( 3 )]
 position = Vector2( 160, -896 )
 
-[node name="EnemyPawn17" parent="Enemies/wave0" instance=ExtResource( 3 )]
-position = Vector2( 224, -896 )
+[node name="Enemy17" parent="Enemies/wave0" instance=ExtResource( 3 )]
+position = Vector2( 224, -832 )
 
-[node name="EnemyPawn18" parent="Enemies/wave0" instance=ExtResource( 3 )]
+[node name="Enemy18" parent="Enemies/wave0" instance=ExtResource( 3 )]
 position = Vector2( 288, -896 )
 
-[node name="EnemyPawn19" parent="Enemies/wave0" instance=ExtResource( 3 )]
-position = Vector2( 352, -896 )
+[node name="Enemy19" parent="Enemies/wave0" instance=ExtResource( 3 )]
+position = Vector2( 352, -832 )
 
-[node name="EnemyPawn16" parent="Enemies/wave0" instance=ExtResource( 3 )]
-position = Vector2( 96, -896 )
+[node name="Enemy16" parent="Enemies/wave0" instance=ExtResource( 3 )]
+position = Vector2( 96, -832 )
 
-[node name="EnemyPawn11" parent="Enemies/wave0" instance=ExtResource( 3 )]
+[node name="Enemy11" parent="Enemies/wave0" instance=ExtResource( 3 )]
 position = Vector2( 33, -896 )
 
-[node name="EnemyPawn12" parent="Enemies/wave0" instance=ExtResource( 3 )]
+[node name="Enemy12" parent="Enemies/wave0" instance=ExtResource( 3 )]
 position = Vector2( 225, -430 )
 
-[node name="EnemyPawn13" parent="Enemies/wave0" instance=ExtResource( 3 )]
+[node name="Enemy13" parent="Enemies/wave0" instance=ExtResource( 3 )]
 position = Vector2( 416, -896 )
 
-[node name="EnemyPawn20" parent="Enemies/wave0" instance=ExtResource( 3 )]
-position = Vector2( 480, -896 )
+[node name="Enemy20" parent="Enemies/wave0" instance=ExtResource( 3 )]
+position = Vector2( 480, -832 )
 
-[node name="EnemyPawn14" parent="Enemies/wave0" instance=ExtResource( 3 )]
+[node name="Enemy14" parent="Enemies/wave0" instance=ExtResource( 3 )]
 position = Vector2( 544, -896 )
 
-[node name="EnemyPawn15" parent="Enemies/wave0" instance=ExtResource( 3 )]
+[node name="Enemy15" parent="Enemies/wave0" instance=ExtResource( 3 )]
 position = Vector2( 96, -432 )
 
 [node name="wave1" type="Node2D" parent="Enemies"]
 position = Vector2( -4, -1056 )
 
-[node name="EnemyPawn0" parent="Enemies/wave1" instance=ExtResource( 3 )]
-position = Vector2( 32, -64 )
-
-[node name="EnemyPawn1" parent="Enemies/wave1" instance=ExtResource( 3 )]
-position = Vector2( 384, -272 )
-
-[node name="EnemyPawn2" parent="Enemies/wave1" instance=ExtResource( 3 )]
-position = Vector2( 320, -272 )
-
-[node name="EnemyPawn3" parent="Enemies/wave1" instance=ExtResource( 3 )]
-position = Vector2( 224, -64 )
-
-[node name="EnemyPawn4" parent="Enemies/wave1" instance=ExtResource( 3 )]
-position = Vector2( 96, -64 )
-
-[node name="EnemyPawn5" parent="Enemies/wave1" instance=ExtResource( 3 )]
-position = Vector2( 448, -272 )
-
-[node name="EnemyPawn6" parent="Enemies/wave1" instance=ExtResource( 3 )]
-position = Vector2( 160, -64 )
-
-[node name="EnemyPawn7" parent="Enemies/wave1" instance=ExtResource( 3 )]
+[node name="Enemy0" parent="Enemies/wave1" instance=ExtResource( 3 )]
 position = Vector2( 32, -432 )
 
-[node name="EnemyPawn8" parent="Enemies/wave1" instance=ExtResource( 3 )]
-position = Vector2( 512, -272 )
+[node name="Enemy1" parent="Enemies/wave1" instance=ExtResource( 3 )]
+position = Vector2( 384, -480 )
 
-[node name="EnemyPawn9" parent="Enemies/wave1" instance=ExtResource( 3 )]
+[node name="Enemy2" parent="Enemies/wave1" instance=ExtResource( 3 )]
+position = Vector2( 320, -544 )
+
+[node name="Enemy3" parent="Enemies/wave1" instance=ExtResource( 3 )]
+position = Vector2( 224, -368 )
+
+[node name="Enemy4" parent="Enemies/wave1" instance=ExtResource( 3 )]
+position = Vector2( 96, -368 )
+
+[node name="Enemy5" parent="Enemies/wave1" instance=ExtResource( 3 )]
+position = Vector2( 448, -544 )
+
+[node name="Enemy6" parent="Enemies/wave1" instance=ExtResource( 3 )]
 position = Vector2( 160, -432 )
 
-[node name="EnemyPawn10" parent="Enemies/wave1" instance=ExtResource( 3 )]
-position = Vector2( 160, -896 )
+[node name="Enemy7" parent="Enemies/wave1" instance=ExtResource( 3 )]
+position = Vector2( 32, -608 )
 
-[node name="EnemyPawn17" parent="Enemies/wave1" instance=ExtResource( 3 )]
-position = Vector2( 224, -896 )
+[node name="Enemy8" parent="Enemies/wave1" instance=ExtResource( 3 )]
+position = Vector2( 512, -480 )
 
-[node name="EnemyPawn18" parent="Enemies/wave1" instance=ExtResource( 3 )]
-position = Vector2( 288, -896 )
+[node name="Enemy9" parent="Enemies/wave1" instance=ExtResource( 3 )]
+position = Vector2( 160, -608 )
 
-[node name="EnemyPawn19" parent="Enemies/wave1" instance=ExtResource( 3 )]
-position = Vector2( 352, -896 )
+[node name="Enemy10" parent="Enemies/wave1" instance=ExtResource( 3 )]
+position = Vector2( 159, -944 )
+health = 6
 
-[node name="EnemyPawn16" parent="Enemies/wave1" instance=ExtResource( 3 )]
-position = Vector2( 96, -896 )
+[node name="Enemy17" parent="Enemies/wave1" instance=ExtResource( 3 )]
+position = Vector2( 223, -912 )
+health = 6
 
-[node name="EnemyPawn11" parent="Enemies/wave1" instance=ExtResource( 3 )]
-position = Vector2( 33, -896 )
+[node name="Enemy18" parent="Enemies/wave1" instance=ExtResource( 3 )]
+position = Vector2( 287, -864 )
+health = 6
 
-[node name="EnemyPawn12" parent="Enemies/wave1" instance=ExtResource( 3 )]
-position = Vector2( 225, -430 )
+[node name="Enemy19" parent="Enemies/wave1" instance=ExtResource( 3 )]
+position = Vector2( 351, -912 )
+health = 6
 
-[node name="EnemyPawn13" parent="Enemies/wave1" instance=ExtResource( 3 )]
-position = Vector2( 416, -896 )
+[node name="Enemy16" parent="Enemies/wave1" instance=ExtResource( 3 )]
+position = Vector2( 95, -912 )
+health = 6
 
-[node name="EnemyPawn20" parent="Enemies/wave1" instance=ExtResource( 3 )]
-position = Vector2( 480, -896 )
+[node name="Enemy11" parent="Enemies/wave1" instance=ExtResource( 3 )]
+position = Vector2( 32, -864 )
+health = 6
 
-[node name="EnemyPawn14" parent="Enemies/wave1" instance=ExtResource( 3 )]
-position = Vector2( 544, -896 )
+[node name="Enemy12" parent="Enemies/wave1" instance=ExtResource( 3 )]
+position = Vector2( 224, -656 )
 
-[node name="EnemyPawn15" parent="Enemies/wave1" instance=ExtResource( 3 )]
-position = Vector2( 96, -432 )
+[node name="Enemy13" parent="Enemies/wave1" instance=ExtResource( 3 )]
+position = Vector2( 415, -944 )
+health = 6
+
+[node name="Enemy20" parent="Enemies/wave1" instance=ExtResource( 3 )]
+position = Vector2( 479, -912 )
+health = 6
+
+[node name="Enemy14" parent="Enemies/wave1" instance=ExtResource( 3 )]
+position = Vector2( 543, -864 )
+health = 6
+
+[node name="Enemy15" parent="Enemies/wave1" instance=ExtResource( 3 )]
+position = Vector2( 96, -656 )
+
+[node name="Enemy21" parent="Enemies/wave1" instance=ExtResource( 26 )]
+position = Vector2( 352, -96 )
+
+[node name="Enemy22" parent="Enemies/wave1" instance=ExtResource( 26 )]
+position = Vector2( 288, -80 )
+
+[node name="Enemy23" parent="Enemies/wave1" instance=ExtResource( 26 )]
+position = Vector2( 224, -96 )
 
 [node name="Backgrounds" type="Node" parent="."]
 
 [node name="bg01" type="Sprite" parent="Backgrounds"]
 texture = ExtResource( 4 )
 centered = false
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="bg02" type="Sprite" parent="Backgrounds"]
 position = Vector2( 0, -1024 )
 texture = ExtResource( 5 )
 centered = false
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="bg03" type="Sprite" parent="Backgrounds"]
 position = Vector2( 0, -2048 )
 texture = ExtResource( 6 )
 centered = false
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="bg04" type="Sprite" parent="Backgrounds"]
 position = Vector2( 0, -3072 )
 texture = ExtResource( 8 )
 centered = false
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="bg05" type="Sprite" parent="Backgrounds"]
 position = Vector2( 0, -4096 )
 texture = ExtResource( 7 )
 centered = false
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="bg06" type="Sprite" parent="Backgrounds"]
 position = Vector2( 0, -5120 )
 texture = ExtResource( 9 )
 centered = false
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="bg07_00" type="Sprite" parent="Backgrounds"]
 position = Vector2( 0, -6144 )
 texture = ExtResource( 10 )
 centered = false
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="bg07_01" type="Sprite" parent="Backgrounds"]
 position = Vector2( 0, -6144 )
 z_index = 2
 texture = ExtResource( 11 )
 centered = false
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="bg08" type="Sprite" parent="Backgrounds"]
 position = Vector2( 0, -7168 )
 texture = ExtResource( 16 )
 centered = false
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="bg09" type="Sprite" parent="Backgrounds"]
 position = Vector2( 0, -8192 )
 texture = ExtResource( 24 )
 centered = false
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="bg10" type="Sprite" parent="Backgrounds"]
 position = Vector2( 0, -9216 )
 texture = ExtResource( 17 )
 centered = false
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="bg11" type="Sprite" parent="Backgrounds"]
 position = Vector2( 0, -10240 )
 texture = ExtResource( 18 )
 centered = false
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="bg12" type="Sprite" parent="Backgrounds"]
 position = Vector2( 0, -11264 )
 texture = ExtResource( 22 )
 centered = false
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="bg13" type="Sprite" parent="Backgrounds"]
 position = Vector2( 0, -12288 )
 texture = ExtResource( 19 )
 centered = false
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="bg14" type="Sprite" parent="Backgrounds"]
 position = Vector2( 0, -13312 )
 texture = ExtResource( 23 )
 centered = false
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="bg15" type="Sprite" parent="Backgrounds"]
 position = Vector2( 0, -14336 )
 texture = ExtResource( 20 )
 centered = false
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="bg16" type="Sprite" parent="Backgrounds"]
 position = Vector2( 0, -15360 )
 texture = ExtResource( 21 )
 centered = false
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="bg17" type="Sprite" parent="Backgrounds"]
 position = Vector2( 0, -16384 )
 texture = ExtResource( 13 )
 centered = false
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="bg18" type="Sprite" parent="Backgrounds"]
 position = Vector2( 0, -17408 )
 texture = ExtResource( 15 )
 centered = false
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="bg19" type="Sprite" parent="Backgrounds"]
 position = Vector2( 0, -18432 )
 texture = ExtResource( 12 )
 centered = false
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="bg20" type="Sprite" parent="Backgrounds"]
 position = Vector2( 0, -19456 )
 texture = ExtResource( 14 )
 centered = false
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 25 )
 autoplay = true
+
+[node name="UI" parent="." instance=ExtResource( 27 )]
 
 [editable path="Player"]

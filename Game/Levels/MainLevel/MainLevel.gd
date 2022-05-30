@@ -12,6 +12,7 @@ func _ready():
 	DefaultCamera.reset()
 	DefaultCamera.scrollUp = true
 	topmostPostion = $Backgrounds.get_child($Backgrounds.get_child_count()-1).position
+	get_tree().call_group("UI", "update_max_distance", abs(topmostPostion.y))
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -25,6 +26,8 @@ func _process(delta):
 	if(DefaultCamera.position.y <= topmostPostion.y):
 		DefaultCamera.scrollUp = false
 		DefaultCamera.position = topmostPostion
+	else:
+		get_tree().call_group("UI", "update_distance", abs(DefaultCamera.position.y))
 
 func _unhandled_input(event):
 	if(event is InputEventScreenTouch):
