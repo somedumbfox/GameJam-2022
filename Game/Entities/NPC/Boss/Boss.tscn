@@ -275,6 +275,7 @@ tracks/4/keys = {
 [node name="Boss" instance=ExtResource( 1 )]
 script = ExtResource( 6 )
 health = 500
+scoreValue = 10000
 
 [node name="EntityCollisionDetector" parent="." index="0"]
 collision_layer = 2
