@@ -14,10 +14,13 @@ func load_next():
 	get_tree().change_scene("res://Levels/MainLevel/MainLevel.tscn")
 
 func _process(delta):
-	if(Input.is_action_just_pressed("mouse_click")):
-		load_next()
+	pass
 
 func _unhandled_input(event):
 	if(event is InputEventScreenTouch):
 		if(event.is_pressed()):
 			load_next()
+
+
+func _on_Subtitle_pressed():
+	load_next() # Replace with function body.

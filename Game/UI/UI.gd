@@ -18,7 +18,7 @@ onready var multiCurrent = $MultiplierDisplay/Multiplier
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	increment_score(0)
-	update_multiplier(1)
+	update_multiplier(2)
 	update_lives(9)
 
 func update_lives(num):
@@ -46,7 +46,7 @@ func update_multiplier(num):
 
 func increment_score(num):
 	score += num * multiplier
-	scoreDisplay.text = String(score)
+	scoreDisplay.text = "%010d"%score
 	Globals.score = score
 
 func update_distance(num):

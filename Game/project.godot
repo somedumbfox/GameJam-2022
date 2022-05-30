@@ -10,7 +10,7 @@ config_version=4
 
 [application]
 
-config/name="Title TBD"
+config/name="GizmosGambit"
 run/main_scene="res://Levels/Menu/MainMenu.tscn"
 config/icon="res://icon.png"
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://UI/UI.gd" type="Script" id=1]
 [ext_resource path="res://UI/Sprites/Cat Portrait.png" type="Texture" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://UI/Sprites/Single_Paw.png" type="Texture" id=6]
 [ext_resource path="res://UI/Sprites/Distance and Distance Meter_Fill.png" type="Texture" id=7]
 [ext_resource path="res://UI/Sprites/Distance and Distance Meter.png" type="Texture" id=8]
+[ext_resource path="res://UI/Fonts/DelatGhotic.tres" type="Theme" id=9]
 
 [node name="UI" type="CanvasLayer" groups=["UI"]]
 script = ExtResource( 1 )
@@ -33,13 +34,14 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Score" type="RichTextLabel" parent="ScoreDisplay"]
+[node name="Score" type="Label" parent="ScoreDisplay"]
 margin_left = 10.0
 margin_top = 954.0
 margin_right = 415.0
 margin_bottom = 1014.0
-bbcode_enabled = true
-scroll_active = false
+theme = ExtResource( 9 )
+text = "0123456789"
+valign = 2
 __meta__ = {
 "_edit_lock_": true
 }

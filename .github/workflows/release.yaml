@@ -16,7 +16,7 @@ jobs:
         env:
           BUTLER_CREDENTIALS: ${{secrets.BUTLER_CREDENTIALS}}
           CHANNEL: HTML5
-          ITCH_GAME: devtv-game-jam-2022-title-tba
+          ITCH_GAME: gizmos-gambit
           ITCH_USER: somedumbfox
           PACKAGE: HTML5.zip
   release_windows:
@@ -33,6 +33,6 @@ jobs:
         env:
           BUTLER_CREDENTIALS: ${{secrets.BUTLER_CREDENTIALS}}
           CHANNEL: Windows
-          ITCH_GAME: devtv-game-jam-2022-title-tba
+          ITCH_GAME: gizmos-gambit
           ITCH_USER: somedumbfox
           PACKAGE: WINDOWSx64.zip
