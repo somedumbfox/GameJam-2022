@@ -1,4 +1,4 @@
-extends KinematicBody2D
+extends Node2D
 
 const SPEED = 500
 export var power = 1
@@ -21,11 +21,11 @@ func absorb():
 	$AnimationPlayer.play("absorb")
 	pass
 
-func _physics_process(_delta):
-	move()
+func _physics_process(delta):
+	move(delta)
 	
-func move():
-	move_and_slide(direction*SPEED)
+func move(delta):
+	position += direction*SPEED*delta
 
 func _on_VisibilityNotifier2D_screen_exited():
 	#print_debug("I'm gone")
