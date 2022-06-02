@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Entities/Player/GhostSpawn.gd" type="Script" id=1]
 [ext_resource path="res://Entities/Player/dualShot.gd" type="Script" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://Entities/Player/Playerhit.tres" type="Animation" id=7]
 [ext_resource path="res://Entities/Player/player_sprites.tres" type="SpriteFrames" id=8]
 [ext_resource path="res://Entities/Player/Ghosts/Ghost.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Sound/SFX/Player/playerhit1.ogg" type="AudioStream" id=10]
 
 [sub_resource type="Animation" id=1]
 length = 0.001
@@ -285,6 +286,9 @@ script = ExtResource( 1 )
 [node name="ghostTimer" type="Timer" parent="." index="6"]
 wait_time = 9.125
 one_shot = true
+
+[node name="AudioStreamPlayer2D" parent="." index="7"]
+stream = ExtResource( 10 )
 
 [connection signal="area_entered" from="EntityCollisionDetector" to="." method="_on_EntityCollisionDetector_area_entered"]
 [connection signal="timeout" from="Guns/gunTimer" to="Guns/dualShot" method="_on_gunTimer_timeout"]

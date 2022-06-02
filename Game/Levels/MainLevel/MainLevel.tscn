@@ -42,6 +42,33 @@ __meta__ = {
 position = Vector2( 300, 841 )
 z_index = 1
 
+[node name="AudioStreamPlayer2D" parent="Player/GhostPath/GhostSpawn0/Ghost" index="3"]
+bus = "Master"
+
+[node name="AudioStreamPlayer2D" parent="Player/GhostPath/GhostSpawn1/Ghost" index="3"]
+bus = "Master"
+
+[node name="AudioStreamPlayer2D" parent="Player/GhostPath/GhostSpawn2/Ghost" index="3"]
+bus = "Master"
+
+[node name="AudioStreamPlayer2D" parent="Player/GhostPath/GhostSpawn3/Ghost" index="3"]
+bus = "Master"
+
+[node name="AudioStreamPlayer2D" parent="Player/GhostPath/GhostSpawn4/Ghost" index="3"]
+bus = "Master"
+
+[node name="AudioStreamPlayer2D" parent="Player/GhostPath/GhostSpawn5/Ghost" index="3"]
+bus = "Master"
+
+[node name="AudioStreamPlayer2D" parent="Player/GhostPath/GhostSpawn6/Ghost" index="3"]
+bus = "Master"
+
+[node name="AudioStreamPlayer2D" parent="Player/GhostPath/GhostSpawn7/Ghost" index="3"]
+bus = "Master"
+
+[node name="AudioStreamPlayer2D" parent="Player" index="7"]
+bus = "Master"
+
 [node name="Enemies" type="Node2D" parent="."]
 position = Vector2( 4, 0 )
 z_index = 1
@@ -661,7 +688,7 @@ direction = Vector2( 0.3, 0.3 )
 
 [node name="Enemy2" parent="Enemies/wave5" instance=ExtResource( 29 )]
 position = Vector2( 416, -752 )
-direction = Vector2( -0.3, -0.3 )
+direction = Vector2( -0.3, 0.3 )
 
 [node name="Enemy41" parent="Enemies/wave5" instance=ExtResource( 26 )]
 position = Vector2( 64, -272 )
@@ -751,11 +778,11 @@ position = Vector2( 288, -656 )
 
 [node name="Enemy6" parent="Enemies/wave6" instance=ExtResource( 29 )]
 position = Vector2( 288, -656 )
-direction = Vector2( -0.5, -0.5 )
+direction = Vector2( -0.5, 0.5 )
 
 [node name="Enemy5" parent="Enemies/wave6" instance=ExtResource( 29 )]
 position = Vector2( 576, -848 )
-direction = Vector2( -0.5, -0.5 )
+direction = Vector2( -0.5, 0.5 )
 
 [node name="wave7" type="Node2D" parent="Enemies"]
 position = Vector2( -4, -7168 )
@@ -845,16 +872,12 @@ position = Vector2( 64, -96 )
 health = 20
 direction = Vector2( 0.25, 0 )
 
-[node name="Enemy" parent="Enemies/wave7" instance=ExtResource( 28 )]
-position = Vector2( 0, -736 )
-direction = Vector2( 0.75, 0 )
+[node name="EnemyBishop" parent="Enemies/wave7" instance=ExtResource( 29 )]
+position = Vector2( 64, -256 )
 
-[node name="EnemyBishop" parent="Enemies/wave7/Enemy" instance=ExtResource( 29 )]
-position = Vector2( 64, 480 )
-
-[node name="EnemyBishop2" parent="Enemies/wave7/Enemy" instance=ExtResource( 29 )]
-position = Vector2( 512, 480 )
-direction = Vector2( -0.5, -0.5 )
+[node name="EnemyBishop2" parent="Enemies/wave7" instance=ExtResource( 29 )]
+position = Vector2( 512, -256 )
+direction = Vector2( -0.5, 0.5 )
 
 [node name="wave8" type="Node2D" parent="Enemies"]
 position = Vector2( -4, -8192 )
@@ -890,7 +913,7 @@ direction = Vector2( 0.25, 0 )
 
 [node name="EnemyQueen" parent="Enemies/wave8" instance=ExtResource( 28 )]
 position = Vector2( 576, -640 )
-direction = Vector2( -0.75, -0.75 )
+direction = Vector2( -0.75, 0.75 )
 
 [node name="EnemyQueen2" parent="Enemies/wave8" instance=ExtResource( 28 )]
 position = Vector2( 0, -640 )
@@ -901,7 +924,7 @@ position = Vector2( 288, -256 )
 
 [node name="EnemyBishop2" parent="Enemies/wave8" instance=ExtResource( 29 )]
 position = Vector2( 288, -256 )
-direction = Vector2( -0.5, -0.5 )
+direction = Vector2( -0.5, 0.5 )
 
 [node name="wave9" type="Node2D" parent="Enemies"]
 position = Vector2( -4, -9216 )
@@ -1228,7 +1251,7 @@ direction = Vector2( 0.3, 0.3 )
 
 [node name="Enemy2" parent="Enemies/wave11" instance=ExtResource( 29 )]
 position = Vector2( 416, -752 )
-direction = Vector2( -0.3, -0.3 )
+direction = Vector2( -0.3, 0.3 )
 
 [node name="Enemy41" parent="Enemies/wave11" instance=ExtResource( 26 )]
 position = Vector2( 64, -272 )
@@ -1318,11 +1341,11 @@ position = Vector2( 288, -656 )
 
 [node name="Enemy6" parent="Enemies/wave12" instance=ExtResource( 29 )]
 position = Vector2( 288, -656 )
-direction = Vector2( -0.5, -0.5 )
+direction = Vector2( -0.5, 0.5 )
 
 [node name="Enemy5" parent="Enemies/wave12" instance=ExtResource( 29 )]
 position = Vector2( 576, -848 )
-direction = Vector2( -0.5, -0.5 )
+direction = Vector2( -0.5, 0.5 )
 
 [node name="wave13" type="Node2D" parent="Enemies"]
 position = Vector2( -4, -13312 )
@@ -1412,16 +1435,12 @@ position = Vector2( 64, -96 )
 health = 20
 direction = Vector2( 0.25, 0 )
 
-[node name="Enemy" parent="Enemies/wave13" instance=ExtResource( 28 )]
-position = Vector2( 0, -736 )
-direction = Vector2( 0.75, 0 )
+[node name="EnemyBishop" parent="Enemies/wave13" instance=ExtResource( 29 )]
+position = Vector2( 64, -256 )
 
-[node name="EnemyBishop" parent="Enemies/wave13/Enemy" instance=ExtResource( 29 )]
-position = Vector2( 64, 480 )
-
-[node name="EnemyBishop2" parent="Enemies/wave13/Enemy" instance=ExtResource( 29 )]
-position = Vector2( 512, 480 )
-direction = Vector2( -0.5, -0.5 )
+[node name="EnemyBishop2" parent="Enemies/wave13" instance=ExtResource( 29 )]
+position = Vector2( 512, -256 )
+direction = Vector2( -0.5, 0.5 )
 
 [node name="wave14" type="Node2D" parent="Enemies"]
 position = Vector2( -4, -14336 )
@@ -1493,7 +1512,7 @@ direction = Vector2( 0.25, 0 )
 
 [node name="EnemyQueen" parent="Enemies/wave14" instance=ExtResource( 28 )]
 position = Vector2( 576, -816 )
-direction = Vector2( -0.75, -0.75 )
+direction = Vector2( -0.75, 0.75 )
 
 [node name="EnemyQueen2" parent="Enemies/wave14" instance=ExtResource( 28 )]
 position = Vector2( 0, -816 )
@@ -1504,7 +1523,7 @@ position = Vector2( 288, -256 )
 
 [node name="EnemyBishop2" parent="Enemies/wave14" instance=ExtResource( 29 )]
 position = Vector2( 288, -256 )
-direction = Vector2( -0.5, -0.5 )
+direction = Vector2( -0.5, 0.5 )
 
 [node name="wave15" type="Node2D" parent="Enemies"]
 position = Vector2( -4, -15360 )
@@ -1600,7 +1619,7 @@ direction = Vector2( 0.3, 0.3 )
 
 [node name="Enemy2" parent="Enemies/wave15" instance=ExtResource( 29 )]
 position = Vector2( 416, -752 )
-direction = Vector2( -0.3, -0.3 )
+direction = Vector2( -0.3, 0.3 )
 
 [node name="Enemy41" parent="Enemies/wave15" instance=ExtResource( 26 )]
 position = Vector2( 64, -272 )
@@ -1690,11 +1709,11 @@ position = Vector2( 288, -656 )
 
 [node name="Enemy6" parent="Enemies/wave16" instance=ExtResource( 29 )]
 position = Vector2( 288, -656 )
-direction = Vector2( -0.5, -0.5 )
+direction = Vector2( -0.5, 0.5 )
 
 [node name="Enemy5" parent="Enemies/wave16" instance=ExtResource( 29 )]
 position = Vector2( 576, -848 )
-direction = Vector2( -0.5, -0.5 )
+direction = Vector2( -0.5, 0.5 )
 
 [node name="wave17" type="Node2D" parent="Enemies"]
 position = Vector2( -4, -17408 )
@@ -1784,16 +1803,12 @@ position = Vector2( 64, -96 )
 health = 20
 direction = Vector2( 0.25, 0 )
 
-[node name="Enemy" parent="Enemies/wave17" instance=ExtResource( 28 )]
-position = Vector2( 0, -736 )
-direction = Vector2( 0.75, 0 )
+[node name="EnemyBishop" parent="Enemies/wave17" instance=ExtResource( 29 )]
+position = Vector2( 64, -256 )
 
-[node name="EnemyBishop" parent="Enemies/wave17/Enemy" instance=ExtResource( 29 )]
-position = Vector2( 64, 480 )
-
-[node name="EnemyBishop2" parent="Enemies/wave17/Enemy" instance=ExtResource( 29 )]
-position = Vector2( 512, 480 )
-direction = Vector2( -0.5, -0.5 )
+[node name="EnemyBishop2" parent="Enemies/wave17" instance=ExtResource( 29 )]
+position = Vector2( 512, -256 )
+direction = Vector2( -0.5, 0.5 )
 
 [node name="wave18" type="Node2D" parent="Enemies"]
 position = Vector2( -4, -18432 )
@@ -1880,7 +1895,7 @@ direction = Vector2( 0.25, 0 )
 position = Vector2( 576, -816 )
 scale = Vector2( 1.1, 1.1 )
 health = 100
-direction = Vector2( -0.1, -0.1 )
+direction = Vector2( -0.1, 0.1 )
 
 [node name="EnemyQueen2" parent="Enemies/wave18" instance=ExtResource( 28 )]
 position = Vector2( 0, -816 )
@@ -1896,7 +1911,7 @@ direction = Vector2( 0.25, 0.25 )
 [node name="EnemyBishop2" parent="Enemies/wave18" instance=ExtResource( 29 )]
 position = Vector2( 288, -256 )
 health = 50
-direction = Vector2( -0.25, -0.25 )
+direction = Vector2( -0.25, 0.25 )
 
 [node name="Boss" type="Node2D" parent="Enemies"]
 position = Vector2( -4, -18432 )
@@ -2078,6 +2093,7 @@ __meta__ = {
 stream = ExtResource( 25 )
 volume_db = -2.0
 autoplay = true
+bus = "Music"
 
 [node name="UI" parent="." instance=ExtResource( 27 )]
 

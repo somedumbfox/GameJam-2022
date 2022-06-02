@@ -33,8 +33,108 @@ theme = ExtResource( 3 )
 custom_fonts/font = ExtResource( 4 )
 text = "Start"
 
+[node name="OpenSettings" type="Button" parent="CanvasLayer"]
+margin_left = 248.0
+margin_top = 802.0
+margin_right = 325.0
+margin_bottom = 846.0
+grow_horizontal = 2
+theme = ExtResource( 3 )
+custom_fonts/font = ExtResource( 4 )
+text = "Settings"
+
+[node name="Settings" type="VBoxContainer" parent="CanvasLayer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 100.0
+margin_right = -100.0
+alignment = 1
+
+[node name="BGMVolume" type="HBoxContainer" parent="CanvasLayer/Settings"]
+margin_top = 463.0
+margin_right = 376.0
+margin_bottom = 491.0
+alignment = 1
+
+[node name="VolumeLabel" type="Label" parent="CanvasLayer/Settings/BGMVolume"]
+margin_left = 8.0
+margin_right = 163.0
+margin_bottom = 28.0
+rect_min_size = Vector2( 155, 0 )
+theme = ExtResource( 3 )
+custom_fonts/font = ExtResource( 4 )
+text = "BGM Volume"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Settings/BGMVolume"]
+margin_left = 167.0
+margin_right = 367.0
+margin_bottom = 28.0
+alignment = 1
+
+[node name="BGMVolumeSlider" type="HSlider" parent="CanvasLayer/Settings/BGMVolume/VBoxContainer"]
+margin_top = 6.0
+margin_right = 200.0
+margin_bottom = 22.0
+grow_horizontal = 2
+grow_vertical = 2
+rect_min_size = Vector2( 200, 0 )
+min_value = -20.0
+max_value = 2.0
+step = 0.5
+
+[node name="SFXVolume" type="HBoxContainer" parent="CanvasLayer/Settings"]
+margin_top = 495.0
+margin_right = 376.0
+margin_bottom = 523.0
+alignment = 1
+
+[node name="VolumeLabel" type="Label" parent="CanvasLayer/Settings/SFXVolume"]
+margin_left = 8.0
+margin_right = 163.0
+margin_bottom = 28.0
+rect_min_size = Vector2( 155, 0 )
+theme = ExtResource( 3 )
+custom_fonts/font = ExtResource( 4 )
+text = "SFX Volume"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Settings/SFXVolume"]
+margin_left = 167.0
+margin_right = 367.0
+margin_bottom = 28.0
+alignment = 1
+
+[node name="SFXVolumeSlider" type="HSlider" parent="CanvasLayer/Settings/SFXVolume/VBoxContainer"]
+margin_top = 6.0
+margin_right = 200.0
+margin_bottom = 22.0
+grow_horizontal = 2
+grow_vertical = 2
+rect_min_size = Vector2( 200, 0 )
+min_value = -20.0
+max_value = 2.0
+step = 0.5
+
+[node name="Close" type="HBoxContainer" parent="CanvasLayer/Settings"]
+margin_top = 527.0
+margin_right = 376.0
+margin_bottom = 561.0
+alignment = 1
+
+[node name="closeSettings" type="Button" parent="CanvasLayer/Settings/Close"]
+margin_left = 153.0
+margin_right = 223.0
+margin_bottom = 34.0
+theme = ExtResource( 3 )
+custom_fonts/font = ExtResource( 4 )
+text = "Close"
+
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 2 )
 autoplay = true
+bus = "Music"
 
 [connection signal="pressed" from="CanvasLayer/Subtitle" to="." method="_on_Subtitle_pressed"]
+[connection signal="pressed" from="CanvasLayer/OpenSettings" to="." method="_on_OpenSettings_pressed"]
+[connection signal="value_changed" from="CanvasLayer/Settings/BGMVolume/VBoxContainer/BGMVolumeSlider" to="." method="_on_BGMVolumeSlider_value_changed"]
+[connection signal="value_changed" from="CanvasLayer/Settings/SFXVolume/VBoxContainer/SFXVolumeSlider" to="." method="_on_SFXVolumeSlider_value_changed"]
+[connection signal="pressed" from="CanvasLayer/Settings/Close/closeSettings" to="." method="_on_closeSettings_pressed"]
