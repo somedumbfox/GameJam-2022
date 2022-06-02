@@ -142,6 +142,18 @@ tracks/10/keys = {
 "update": 0,
 "values": [ 1.0 ]
 }
+tracks/11/type = "value"
+tracks/11/path = NodePath("EntityCollisionDetector:monitorable")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
 
 [sub_resource type="Animation" id=3]
 resource_name = "die"
@@ -369,7 +381,6 @@ position = Vector2( 0, 38 )
 [node name="EntityCollisionDetector" parent="." index="1"]
 collision_layer = 2
 collision_mask = 21
-monitorable = false
 
 [node name="EntityPhysicsShape" parent="EntityCollisionDetector" index="0"]
 position = Vector2( -0.5, 9.5 )
