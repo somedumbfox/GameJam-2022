@@ -206,7 +206,6 @@ tracks/3/keys = {
 }
 
 [node name="EnemyProjectile" type="Node2D"]
-z_index = 1
 script = ExtResource( 3 )
 
 [node name="Area2D" type="Area2D" parent="."]
@@ -220,7 +219,6 @@ shape = ExtResource( 1 )
 position = Vector2( -45, 0 )
 rotation = -1.5708
 frames = ExtResource( 2 )
-frame = 1
 playing = true
 
 [node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]

@@ -13,6 +13,7 @@ func _ready():
 	$CanvasLayer/Settings.hide()
 
 func load_next():
+	$AudioStreamPlayer.stop()
 	get_tree().change_scene("res://Levels/MainLevel/MainLevel.tscn")
 
 func open_settings():

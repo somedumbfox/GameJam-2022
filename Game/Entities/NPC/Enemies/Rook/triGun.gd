@@ -39,7 +39,7 @@ func fire():
 		#bullet.direction = direction
 		bullet.global_position = gun.global_position
 		bullet.set_as_toplevel(true)
-		get_tree().get_root().add_child(bullet)
+		get_tree().get_current_scene().add_child(bullet)
 		count +=1
 
 func _on_gunTimer_timeout():

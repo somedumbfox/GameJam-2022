@@ -2097,7 +2097,7 @@ bus = "Music"
 
 [node name="UI" parent="." instance=ExtResource( 27 )]
 
-[connection signal="tree_exited" from="Enemies/Boss/Boss" to="." method="_on_Boss_tree_exited"]
+[connection signal="onDestroy" from="Enemies/Boss/Boss" to="." method="_on_Boss_onDestroy"]
 
 [editable path="Player"]
 [editable path="Player/GhostPath/GhostSpawn0/Ghost"]

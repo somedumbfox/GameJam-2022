@@ -303,5 +303,6 @@ volume_db = 1.5
 
 [node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="." index="4"]
 
+[connection signal="onDestroy" from="." to="." method="_on_Boss_onDestroy"]
 [connection signal="area_entered" from="EntityCollisionDetector" to="." method="_on_EntityCollisionDetector_area_entered"]
 [connection signal="screen_entered" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_entered"]

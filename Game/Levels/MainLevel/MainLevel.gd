@@ -38,3 +38,8 @@ func _unhandled_input(event):
 func _on_Boss_tree_exited():
 	$AudioStreamPlayer.stop()
 	load_next() # Replace with function body.
+
+
+func _on_Boss_onDestroy():
+	$AudioStreamPlayer.stop()
+	load_next() # Replace with function body.

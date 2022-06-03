@@ -6,6 +6,7 @@ extends "res://Entities/Entity/Entity.gd"
 # var b = "text"
 var SPEED = 0
 var offScreen = true
+signal onDestroy;
 
 
 # Called when the node enters the scene tree for the first time.
@@ -33,6 +34,7 @@ func _on_EntityCollisionDetector_area_entered(area:Area2D):
 	if(health <= 0):
 		get_tree().call_group("UI", "increment_score", scoreValue)
 		$AnimationPlayer.play("die")
+		emit_signal("onDestroy")
 		
 func play_hit():
 	$AnimationPlayer.play("RESET")
@@ -45,3 +47,7 @@ func play_hit():
 
 func _on_VisibilityNotifier2D_screen_entered():
 	offScreen = false # Replace with function body.
+
+
+func _on_Boss_onDestroy():
+	pass # Replace with function body.
