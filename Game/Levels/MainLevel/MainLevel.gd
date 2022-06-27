@@ -20,7 +20,7 @@ func _ready():
 func load_next():
 	get_tree().change_scene("res://Levels/End/GameEnd.tscn")
 
-func _process(delta):
+func _process(_delta):
 	if(Input.is_action_just_pressed("ui_cancel")):
 		load_next()
 	if(DefaultCamera.position.y <= topmostPostion.y):

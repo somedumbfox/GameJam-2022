@@ -22,7 +22,6 @@ func _ready():
 	update_lives(9)
 
 func update_lives(num):
-	var icontest = $Lives/live1
 	if num > liveIcons.get_child_count():
 		return
 	var i = 1
@@ -58,5 +57,5 @@ func update_max_distance(num):
 	$Distance/Progress.max_value = max_distance
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	pass

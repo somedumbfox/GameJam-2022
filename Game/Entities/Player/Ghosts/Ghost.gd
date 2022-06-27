@@ -18,14 +18,14 @@ func _ready():
 func enable():
 	visible = true
 	isEnabled = true
-	$EntityCollisionDetector.monitoring = true
-	$EntityCollisionDetector.monitorable = true
+	$EntityCollisionDetector.set_deferred("monitoring", true)
+	$EntityCollisionDetector.set_deferred("monitorable", true)
 
 func disable():
 	visible = false
 	isEnabled = false
-	$EntityCollisionDetector.monitoring = false
-	$EntityCollisionDetector.monitorable = false
+	$EntityCollisionDetector.set_deferred("monitoring", false)
+	$EntityCollisionDetector.set_deferred("monitorable", false)
 
 
 func _on_EntityCollisionDetector_area_entered(area):

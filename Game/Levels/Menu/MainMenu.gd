@@ -7,10 +7,11 @@ extends Node2D
 onready var BGMvolumeSlider = $CanvasLayer/Settings/BGMVolume/VBoxContainer/BGMVolumeSlider
 onready var SFXvolumeSlider = $CanvasLayer/Settings/SFXVolume/VBoxContainer/SFXVolumeSlider
 
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$CanvasLayer/Settings.hide()
+	BGMvolumeSlider.value = AudioServer.get_bus_volume_db(AudioServer.get_bus_index("Music"))
+	SFXvolumeSlider.value = AudioServer.get_bus_volume_db(AudioServer.get_bus_index("SFX"))
 
 func load_next():
 	$AudioStreamPlayer.stop()
@@ -47,8 +48,8 @@ func _on_OpenSettings_pressed():
 
 
 func _on_BGMVolumeSlider_value_changed(value):
-	set_BGM_Volume(BGMvolumeSlider.value)
+	set_BGM_Volume(value)
 
 
 func _on_SFXVolumeSlider_value_changed(value):
-	set_SFX_Volume(SFXvolumeSlider.value)
+	set_SFX_Volume(value)

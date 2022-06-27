@@ -28,7 +28,7 @@ func _ready():
 	define_ghost_paths()
 	pass # Replace with function body.
 
-func _process(delta):
+func _process(_delta):
 	update_debug_box()
 	
 func update_debug_box():
