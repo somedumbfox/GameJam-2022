@@ -63,6 +63,7 @@ buffering/agile_event_flushing=true
 [physics]
 
 common/enable_pause_aware_picking=true
+common/physics_fps.HTML5=30
 
 [rendering]
 

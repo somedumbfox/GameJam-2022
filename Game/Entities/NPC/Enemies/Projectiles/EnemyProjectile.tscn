@@ -243,6 +243,7 @@ shape = ExtResource( 1 )
 position = Vector2( -40, 0 )
 rotation = -1.5708
 frames = ExtResource( 2 )
+frame = 2
 playing = true
 
 [node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
