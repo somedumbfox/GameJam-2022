@@ -10,6 +10,7 @@ Max multiplier is x9, max lives is 9.
 You max multiplier is tied to how many lives you have.
 
 | Num Lives | Max Multiplier |
+|---|---|
 | 9 | x9 |
 | 6-8 | x6 |
 | 4-6 | x4 |
