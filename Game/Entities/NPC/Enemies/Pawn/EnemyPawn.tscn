@@ -374,6 +374,7 @@ tracks/5/keys = {
 [node name="EnemyPawn" instance=ExtResource( 4 )]
 script = ExtResource( 1 )
 scoreValue = 10
+SPEED = 150
 
 [node name="VisibilityEnabler2D" type="VisibilityNotifier2D" parent="." index="0"]
 position = Vector2( 0, 38 )
